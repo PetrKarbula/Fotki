@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E487B9DC1840E3960076D64E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9DB1840E3960076D64E /* Foundation.framework */; };
+		E487B9DE1840E3960076D64E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9DD1840E3960076D64E /* CoreGraphics.framework */; };
+		E487B9E01840E3960076D64E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9DF1840E3960076D64E /* UIKit.framework */; };
+		E487B9E61840E3970076D64E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E487B9E41840E3970076D64E /* InfoPlist.strings */; };
+		E487B9E81840E3970076D64E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E487B9E71840E3970076D64E /* main.m */; };
+		E487B9EC1840E3970076D64E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E487B9EB1840E3970076D64E /* AppDelegate.m */; };
+		E487B9EF1840E3970076D64E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E487B9ED1840E3970076D64E /* Main.storyboard */; };
+		E487B9F21840E3970076D64E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E487B9F11840E3970076D64E /* ViewController.m */; };
+		E487B9F41840E3970076D64E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E487B9F31840E3970076D64E /* Images.xcassets */; };
+		E487B9FB1840E3970076D64E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9FA1840E3970076D64E /* XCTest.framework */; };
+		E487B9FC1840E3970076D64E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9DB1840E3960076D64E /* Foundation.framework */; };
+		E487B9FD1840E3970076D64E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9DF1840E3960076D64E /* UIKit.framework */; };
+		E487BA051840E3970076D64E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E487BA031840E3970076D64E /* InfoPlist.strings */; };
+		E487BA071840E3970076D64E /* FotkiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E487BA061840E3970076D64E /* FotkiTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E487B9FE1840E3970076D64E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E487B9D01840E3960076D64E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E487B9D71840E3960076D64E;
+			remoteInfo = Fotki;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E487B9D81840E3960076D64E /* Fotki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fotki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E487B9DB1840E3960076D64E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E487B9DD1840E3960076D64E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E487B9DF1840E3960076D64E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E487B9E31840E3970076D64E /* Fotki-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fotki-Info.plist"; sourceTree = "<group>"; };
+		E487B9E51840E3970076D64E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E487B9E71840E3970076D64E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E487B9E91840E3970076D64E /* Fotki-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fotki-Prefix.pch"; sourceTree = "<group>"; };
+		E487B9EA1840E3970076D64E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E487B9EB1840E3970076D64E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E487B9EE1840E3970076D64E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E487B9F01840E3970076D64E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E487B9F11840E3970076D64E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E487B9F31840E3970076D64E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E487B9F91840E3970076D64E /* FotkiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FotkiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E487B9FA1840E3970076D64E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E487BA021840E3970076D64E /* FotkiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FotkiTests-Info.plist"; sourceTree = "<group>"; };
+		E487BA041840E3970076D64E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E487BA061840E3970076D64E /* FotkiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FotkiTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E487B9D51840E3960076D64E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E487B9DE1840E3960076D64E /* CoreGraphics.framework in Frameworks */,
+				E487B9E01840E3960076D64E /* UIKit.framework in Frameworks */,
+				E487B9DC1840E3960076D64E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E487B9F61840E3970076D64E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E487B9FB1840E3970076D64E /* XCTest.framework in Frameworks */,
+				E487B9FD1840E3970076D64E /* UIKit.framework in Frameworks */,
+				E487B9FC1840E3970076D64E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E487B9CF1840E3960076D64E = {
+			isa = PBXGroup;
+			children = (
+				E487B9E11840E3970076D64E /* Fotki */,
+				E487BA001840E3970076D64E /* FotkiTests */,
+				E487B9DA1840E3960076D64E /* Frameworks */,
+				E487B9D91840E3960076D64E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E487B9D91840E3960076D64E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E487B9D81840E3960076D64E /* Fotki.app */,
+				E487B9F91840E3970076D64E /* FotkiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E487B9DA1840E3960076D64E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E487B9DB1840E3960076D64E /* Foundation.framework */,
+				E487B9DD1840E3960076D64E /* CoreGraphics.framework */,
+				E487B9DF1840E3960076D64E /* UIKit.framework */,
+				E487B9FA1840E3970076D64E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E487B9E11840E3970076D64E /* Fotki */ = {
+			isa = PBXGroup;
+			children = (
+				E487BA101840E3EC0076D64E /* iPad */,
+				E487B9EA1840E3970076D64E /* AppDelegate.h */,
+				E487B9EB1840E3970076D64E /* AppDelegate.m */,
+				E487B9ED1840E3970076D64E /* Main.storyboard */,
+				E487B9F01840E3970076D64E /* ViewController.h */,
+				E487B9F11840E3970076D64E /* ViewController.m */,
+				E487B9F31840E3970076D64E /* Images.xcassets */,
+				E487B9E21840E3970076D64E /* Supporting Files */,
+			);
+			path = Fotki;
+			sourceTree = "<group>";
+		};
+		E487B9E21840E3970076D64E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E487B9E31840E3970076D64E /* Fotki-Info.plist */,
+				E487B9E41840E3970076D64E /* InfoPlist.strings */,
+				E487B9E71840E3970076D64E /* main.m */,
+				E487B9E91840E3970076D64E /* Fotki-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E487BA001840E3970076D64E /* FotkiTests */ = {
+			isa = PBXGroup;
+			children = (
+				E487BA061840E3970076D64E /* FotkiTests.m */,
+				E487BA011840E3970076D64E /* Supporting Files */,
+			);
+			path = FotkiTests;
+			sourceTree = "<group>";
+		};
+		E487BA011840E3970076D64E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E487BA021840E3970076D64E /* FotkiTests-Info.plist */,
+				E487BA031840E3970076D64E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E487BA101840E3EC0076D64E /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E487B9D71840E3960076D64E /* Fotki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E487BA0A1840E3970076D64E /* Build configuration list for PBXNativeTarget "Fotki" */;
+			buildPhases = (
+				E487B9D41840E3960076D64E /* Sources */,
+				E487B9D51840E3960076D64E /* Frameworks */,
+				E487B9D61840E3960076D64E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fotki;
+			productName = Fotki;
+			productReference = E487B9D81840E3960076D64E /* Fotki.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E487B9F81840E3970076D64E /* FotkiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E487BA0D1840E3970076D64E /* Build configuration list for PBXNativeTarget "FotkiTests" */;
+			buildPhases = (
+				E487B9F51840E3970076D64E /* Sources */,
+				E487B9F61840E3970076D64E /* Frameworks */,
+				E487B9F71840E3970076D64E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E487B9FF1840E3970076D64E /* PBXTargetDependency */,
+			);
+			name = FotkiTests;
+			productName = FotkiTests;
+			productReference = E487B9F91840E3970076D64E /* FotkiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E487B9D01840E3960076D64E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Craneballs_Barcelona;
+				TargetAttributes = {
+					E487B9F81840E3970076D64E = {
+						TestTargetID = E487B9D71840E3960076D64E;
+					};
+				};
+			};
+			buildConfigurationList = E487B9D31840E3960076D64E /* Build configuration list for PBXProject "Fotki" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E487B9CF1840E3960076D64E;
+			productRefGroup = E487B9D91840E3960076D64E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E487B9D71840E3960076D64E /* Fotki */,
+				E487B9F81840E3970076D64E /* FotkiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E487B9D61840E3960076D64E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E487B9F41840E3970076D64E /* Images.xcassets in Resources */,
+				E487B9E61840E3970076D64E /* InfoPlist.strings in Resources */,
+				E487B9EF1840E3970076D64E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E487B9F71840E3970076D64E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E487BA051840E3970076D64E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E487B9D41840E3960076D64E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E487B9F21840E3970076D64E /* ViewController.m in Sources */,
+				E487B9EC1840E3970076D64E /* AppDelegate.m in Sources */,
+				E487B9E81840E3970076D64E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E487B9F51840E3970076D64E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E487BA071840E3970076D64E /* FotkiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E487B9FF1840E3970076D64E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E487B9D71840E3960076D64E /* Fotki */;
+			targetProxy = E487B9FE1840E3970076D64E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E487B9E41840E3970076D64E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E487B9E51840E3970076D64E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E487B9ED1840E3970076D64E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E487B9EE1840E3970076D64E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E487BA031840E3970076D64E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E487BA041840E3970076D64E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E487BA081840E3970076D64E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E487BA091840E3970076D64E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E487BA0B1840E3970076D64E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fotki/Fotki-Prefix.pch";
+				INFOPLIST_FILE = "Fotki/Fotki-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E487BA0C1840E3970076D64E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fotki/Fotki-Prefix.pch";
+				INFOPLIST_FILE = "Fotki/Fotki-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E487BA0E1840E3970076D64E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fotki.app/Fotki";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fotki/Fotki-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FotkiTests/FotkiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E487BA0F1840E3970076D64E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Fotki.app/Fotki";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fotki/Fotki-Prefix.pch";
+				INFOPLIST_FILE = "FotkiTests/FotkiTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E487B9D31840E3960076D64E /* Build configuration list for PBXProject "Fotki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E487BA081840E3970076D64E /* Debug */,
+				E487BA091840E3970076D64E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E487BA0A1840E3970076D64E /* Build configuration list for PBXNativeTarget "Fotki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E487BA0B1840E3970076D64E /* Debug */,
+				E487BA0C1840E3970076D64E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E487BA0D1840E3970076D64E /* Build configuration list for PBXNativeTarget "FotkiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E487BA0E1840E3970076D64E /* Debug */,
+				E487BA0F1840E3970076D64E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E487B9D01840E3960076D64E /* Project object */;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2E4462F1-9E86-4F46-832B-28506644B423</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Fotki</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>073089A6-C96B-4D2D-BCE5-CFA5DF1CC697</key>
+		<string>https://github.com/PetrKarbula/Fotki.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Fotki.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>073089A6-C96B-4D2D-BCE5-CFA5DF1CC697</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/PetrKarbula/Fotki.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>073089A6-C96B-4D2D-BCE5-CFA5DF1CC697</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>073089A6-C96B-4D2D-BCE5-CFA5DF1CC697</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Fotki_git</string>
+		</dict>
+	</array>
+</dict>
+</plist>
