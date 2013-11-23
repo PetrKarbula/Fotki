@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SidebarViewController : UITableViewController
+@class InternetConnection;
 
+@interface SidebarViewController : UITableViewController
+{
+    InternetConnection *internetConnection;
+}
 @end

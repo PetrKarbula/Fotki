@@ -9,10 +9,11 @@
 #import "SidebarViewController.h"
 #import "PhotoViewController.h"
 #import "SWRevealViewController.h"
+#import "InternetConnection.h"
 
 @interface SidebarViewController ()
 
-@property (nonatomic, strong) NSArray *menuItems;
+@property (nonatomic, strong) NSMutableArray *menuItems;
 @end
 
 @implementation SidebarViewController
@@ -28,20 +29,38 @@
 
 - (void)viewDidLoad
 {
+    internetConnection = [[InternetConnection alloc] init];
+    
+    [internetConnection postWithParameters: @"address=Praha"];
+    
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
     self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
     
-    _menuItems = @[@"title", @"news", @"map", @"photo"];
+    //_menuItems = @[@"title", @"news", @"map", @"photo"];
+    
+    _menuItems = [[NSMutableArray alloc] init];
+    [_menuItems addObject:@"title"];
+    [_menuItems addObject:@"news"];
+    [_menuItems addObject:@"map"];
+    [_menuItems addObject:@"photo"];
 
     
-//    [self.tableView beginUpdates];
-//        NSIndexPath *path1 = [NSIndexPath indexPathForRow:1 inSection:0]; //ALSO TRIED WITH indexPathRow:0
-//        NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
-//        [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationNone];
-//    [self.tableView endUpdates];
+    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+    
+    //int i = 0;
+    //for (NSArray *count in bonjourMachines)
+    for (int i = 0; i < 1; i++)
+    {
+        //[tempArray addObject:[NSIndexPath indexPathForRow:i++ inSection:0]];
+        //[self.menuItems addObject: @"pica"];
+    }
+    
+    [[self tableView] beginUpdates];
+    //[[self tableView] insertRowsAtIndexPaths:(NSArray *)tempArray withRowAnimation:UITableViewRowAnimationNone];
+    [[self tableView] endUpdates];
 }
 
 - (void)didReceiveMemoryWarning
