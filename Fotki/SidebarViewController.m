@@ -1,16 +1,8 @@
-//
-//  SidebarViewController.m
-//  SidebarDemo
-//
-//  Created by Simon on 29/6/13.
-//  Copyright (c) 2013 Appcoda. All rights reserved.
-//
-
 #import "SidebarViewController.h"
 #import "PhotoViewController.h"
 #import "SWRevealViewController.h"
 #import "AFNetworking.h"
-#import "InternetConnection.h"
+#import "AppDelegate.h"
 
 @interface SidebarViewController ()
 
@@ -34,19 +26,37 @@
     
     [autocompleteSuggestions removeAllObjects];
     [self.tableView reloadData];
+
+    AppDelegate *delegate = (AppDelegate*)
+    [[UIApplication sharedApplication] delegate];
+
+    [delegate.mainView postWithParameters:[self addressBuilder]];
     
-    // Volat internet conneciton
+    [self .revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
+}
+
+- (NSString*) addressBuilder
+{
     NSArray *parameters = [searchBar.text componentsSeparatedByString:@","];
+    NSString *address;
+    for(int i = 0; i < parameters.count; i++)
+    {
+        [address stringByAppendingString:[NSString stringWithFormat:@"address%i=%@&", i, [parameters objectAtIndex:i]]];
+    }
+    [address substringToIndex:[address length]-2];
     
-    
-    internetConnection = [[InternetConnection alloc] init];
-    [internetConnection postWithParameters: @"address=Praha"];
+    return address;
 }
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    AppDelegate *delegate = (AppDelegate*)
+    [[UIApplication sharedApplication] delegate];
+    
+    delegate.sideBarView = self;
     
     self.view.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];

@@ -39,8 +39,6 @@
 		E44235841840FE1300A8874D /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44235821840FE1300A8874D /* PhotoViewController.m */; };
 		E44235861841039D00A8874D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44235851841039D00A8874D /* MapKit.framework */; };
 		E4423588184103A200A8874D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4423587184103A200A8874D /* CoreLocation.framework */; };
-		E442359818411B6700A8874D /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E442359718411B6700A8874D /* GoogleMaps.framework */; };
-		E44235A5184128CF00A8874D /* InternetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E44235A4184128CF00A8874D /* InternetConnection.m */; };
 		E44235A81841402800A8874D /* FotkiData.m in Sources */ = {isa = PBXBuildFile; fileRef = E44235A71841402800A8874D /* FotkiData.m */; };
 		E44235AF184142F300A8874D /* FotkiBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = E44235AE184142F300A8874D /* FotkiBuilder.m */; };
 		E487B9DC1840E3960076D64E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9DB1840E3960076D64E /* Foundation.framework */; };
@@ -55,6 +53,7 @@
 		E487B9FB1840E3970076D64E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9FA1840E3970076D64E /* XCTest.framework */; };
 		E487B9FC1840E3970076D64E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9DB1840E3960076D64E /* Foundation.framework */; };
 		E487B9FD1840E3970076D64E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9DF1840E3960076D64E /* UIKit.framework */; };
+		EAE8CFD71841587500B401D4 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E442359718411B6700A8874D /* GoogleMaps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,8 +115,6 @@
 		E44235851841039D00A8874D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E4423587184103A200A8874D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E442359718411B6700A8874D /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		E44235A3184128CF00A8874D /* InternetConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InternetConnection.h; path = Fotki/InternetConnection.h; sourceTree = "<group>"; };
-		E44235A4184128CF00A8874D /* InternetConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InternetConnection.m; path = Fotki/InternetConnection.m; sourceTree = "<group>"; };
 		E44235A61841402800A8874D /* FotkiData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FotkiData.h; path = Fotki/FotkiData.h; sourceTree = "<group>"; };
 		E44235A71841402800A8874D /* FotkiData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FotkiData.m; path = Fotki/FotkiData.m; sourceTree = "<group>"; };
 		E44235AD184142F300A8874D /* FotkiBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FotkiBuilder.h; path = Fotki/FotkiBuilder.h; sourceTree = "<group>"; };
@@ -146,7 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E487B9DC1840E3960076D64E /* Foundation.framework in Frameworks */,
-				E442359818411B6700A8874D /* GoogleMaps.framework in Frameworks */,
+				EAE8CFD71841587500B401D4 /* GoogleMaps.framework in Frameworks */,
 				E4423588184103A200A8874D /* CoreLocation.framework in Frameworks */,
 				E44235861841039D00A8874D /* MapKit.framework in Frameworks */,
 				E487B9DE1840E3960076D64E /* CoreGraphics.framework in Frameworks */,
@@ -250,8 +247,6 @@
 				E44235AE184142F300A8874D /* FotkiBuilder.m */,
 				E44235A61841402800A8874D /* FotkiData.h */,
 				E44235A71841402800A8874D /* FotkiData.m */,
-				E44235A3184128CF00A8874D /* InternetConnection.h */,
-				E44235A4184128CF00A8874D /* InternetConnection.m */,
 				E44235531840F60000A8874D /* Libraries */,
 				E487B9E11840E3970076D64E /* Fotki */,
 				E487B9DA1840E3960076D64E /* Frameworks */,
@@ -451,7 +446,6 @@
 				E41A02221841502E006EB6A3 /* AFJSONRequestOperation.m in Sources */,
 				E44235A81841402800A8874D /* FotkiData.m in Sources */,
 				E442355B1840F6A300A8874D /* MainViewController.m in Sources */,
-				E44235A5184128CF00A8874D /* InternetConnection.m in Sources */,
 				E44235561840F60000A8874D /* SWRevealViewController.m in Sources */,
 				E44235831840FE1300A8874D /* MapViewController.m in Sources */,
 				E41A021F1841502E006EB6A3 /* AFHTTPClient.m in Sources */,
@@ -576,6 +570,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/malykuba/Craneballs/Fotki_git/Libraries/GoogleMaps-iOS-1.6.0",
+					"/Users/Marek/Documents/Fotki/Libraries/GoogleMaps-iOS-1.6.0",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fotki/Fotki-Prefix.pch";
@@ -596,6 +591,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/malykuba/Craneballs/Fotki_git/Libraries/GoogleMaps-iOS-1.6.0",
+					"/Users/Marek/Documents/Fotki/Libraries/GoogleMaps-iOS-1.6.0",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fotki/Fotki-Prefix.pch";
