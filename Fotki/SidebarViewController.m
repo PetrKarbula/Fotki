@@ -34,12 +34,14 @@
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
     self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
     
-    
-    
     _menuItems = @[@"title", @"news", @"map", @"photo"];
-    
-    
 
+    
+    [self.tableView beginUpdates];
+        NSIndexPath *path1 = [NSIndexPath indexPathForRow:1 inSection:0]; //ALSO TRIED WITH indexPathRow:0
+        NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
+        [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationNone];
+    [self.tableView endUpdates];
 }
 
 - (void)didReceiveMemoryWarning
