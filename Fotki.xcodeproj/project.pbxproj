@@ -16,6 +16,13 @@
 		E41A02251841502E006EB6A3 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A021A1841502E006EB6A3 /* AFURLConnectionOperation.m */; };
 		E41A02261841502E006EB6A3 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A021C1841502E006EB6A3 /* AFXMLRequestOperation.m */; };
 		E41A02271841502E006EB6A3 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A021E1841502E006EB6A3 /* UIImageView+AFNetworking.m */; };
+		E41A02341841655E006EB6A3 /* Africa in Resources */ = {isa = PBXBuildFile; fileRef = E41A022C1841655E006EB6A3 /* Africa */; };
+		E41A02361841655E006EB6A3 /* Asia in Resources */ = {isa = PBXBuildFile; fileRef = E41A022E1841655E006EB6A3 /* Asia */; };
+		E41A02371841655E006EB6A3 /* Continents in Resources */ = {isa = PBXBuildFile; fileRef = E41A022F1841655E006EB6A3 /* Continents */; };
+		E41A02381841655E006EB6A3 /* Europe in Resources */ = {isa = PBXBuildFile; fileRef = E41A02301841655E006EB6A3 /* Europe */; };
+		E41A02391841655E006EB6A3 /* NorthAmerica in Resources */ = {isa = PBXBuildFile; fileRef = E41A02311841655E006EB6A3 /* NorthAmerica */; };
+		E41A023A1841655E006EB6A3 /* Oceania in Resources */ = {isa = PBXBuildFile; fileRef = E41A02321841655E006EB6A3 /* Oceania */; };
+		E41A023B1841655E006EB6A3 /* South America in Resources */ = {isa = PBXBuildFile; fileRef = E41A02331841655E006EB6A3 /* South America */; };
 		E44235561840F60000A8874D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44235551840F60000A8874D /* SWRevealViewController.m */; };
 		E442355B1840F6A300A8874D /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44235581840F6A300A8874D /* MainViewController.m */; };
 		E442355C1840F6A300A8874D /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E442355A1840F6A300A8874D /* SidebarViewController.m */; };
@@ -86,6 +93,13 @@
 		E41A021C1841502E006EB6A3 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		E41A021D1841502E006EB6A3 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		E41A021E1841502E006EB6A3 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		E41A022C1841655E006EB6A3 /* Africa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Africa; sourceTree = "<group>"; };
+		E41A022E1841655E006EB6A3 /* Asia */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Asia; sourceTree = "<group>"; };
+		E41A022F1841655E006EB6A3 /* Continents */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Continents; sourceTree = "<group>"; };
+		E41A02301841655E006EB6A3 /* Europe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Europe; sourceTree = "<group>"; };
+		E41A02311841655E006EB6A3 /* NorthAmerica */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NorthAmerica; sourceTree = "<group>"; };
+		E41A02321841655E006EB6A3 /* Oceania */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Oceania; sourceTree = "<group>"; };
+		E41A02331841655E006EB6A3 /* South America */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "South America"; sourceTree = "<group>"; };
 		E44235541840F60000A8874D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		E44235551840F60000A8874D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		E44235571840F6A300A8874D /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -190,6 +204,20 @@
 			path = AFNetworking;
 			sourceTree = SOURCE_ROOT;
 		};
+		E41A022B1841655E006EB6A3 /* DefaultData */ = {
+			isa = PBXGroup;
+			children = (
+				E41A022C1841655E006EB6A3 /* Africa */,
+				E41A022E1841655E006EB6A3 /* Asia */,
+				E41A022F1841655E006EB6A3 /* Continents */,
+				E41A02301841655E006EB6A3 /* Europe */,
+				E41A02311841655E006EB6A3 /* NorthAmerica */,
+				E41A02321841655E006EB6A3 /* Oceania */,
+				E41A02331841655E006EB6A3 /* South America */,
+			);
+			path = DefaultData;
+			sourceTree = "<group>";
+		};
 		E44235531840F60000A8874D /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +308,7 @@
 		E487B9E11840E3970076D64E /* Fotki */ = {
 			isa = PBXGroup;
 			children = (
+				E41A022B1841655E006EB6A3 /* DefaultData */,
 				E442357F1840FE1300A8874D /* MapViewController.h */,
 				E44235801840FE1300A8874D /* MapViewController.m */,
 				E44235811840FE1300A8874D /* PhotoViewController.h */,
@@ -394,21 +423,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E41A02341841655E006EB6A3 /* Africa in Resources */,
 				E44235721840FC3F00A8874D /* photo_photo.jpg in Resources */,
 				E44235771840FC3F00A8874D /* menu@2x.png in Resources */,
 				E442357A1840FC3F00A8874D /* photo.png in Resources */,
 				E44235741840FC3F00A8874D /* comments_photo.jpg in Resources */,
 				E442357C1840FC3F00A8874D /* tag_photo.jpg in Resources */,
+				E41A02371841655E006EB6A3 /* Continents in Resources */,
+				E41A02361841655E006EB6A3 /* Asia in Resources */,
 				E44235701840FC3F00A8874D /* bookmark_photo.jpg in Resources */,
 				E44235791840FC3F00A8874D /* news.png in Resources */,
 				E442357B1840FC3F00A8874D /* tag.png in Resources */,
 				E44235711840FC3F00A8874D /* calendar.png in Resources */,
 				E44235751840FC3F00A8874D /* map.png in Resources */,
+				E41A023A1841655E006EB6A3 /* Oceania in Resources */,
 				E487B9F41840E3970076D64E /* Images.xcassets in Resources */,
+				E41A02381841655E006EB6A3 /* Europe in Resources */,
 				E442356F1840FC3F00A8874D /* bookmark.png in Resources */,
 				E44235731840FC3F00A8874D /* comments.png in Resources */,
+				E41A02391841655E006EB6A3 /* NorthAmerica in Resources */,
 				E442357E1840FC3F00A8874D /* wishlist_photo.jpg in Resources */,
 				E44235761840FC3F00A8874D /* menu.png in Resources */,
+				E41A023B1841655E006EB6A3 /* South America in Resources */,
 				E442357D1840FC3F00A8874D /* wishlist.png in Resources */,
 				E487B9E61840E3970076D64E /* InfoPlist.strings in Resources */,
 				E44235781840FC3F00A8874D /* nav_bg.png in Resources */,
