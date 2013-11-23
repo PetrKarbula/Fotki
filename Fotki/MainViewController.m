@@ -12,6 +12,8 @@
 
 @interface MainViewController ()
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
 @end
 
 @implementation MainViewController
