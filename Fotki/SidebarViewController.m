@@ -9,58 +9,58 @@
 #import "SidebarViewController.h"
 #import "PhotoViewController.h"
 #import "SWRevealViewController.h"
+#import "AFNetworking.h"
 #import "InternetConnection.h"
 
 @interface SidebarViewController ()
 
-@property (nonatomic, strong) NSMutableArray *menuItems;
+@property (nonatomic, strong) NSArray *menuItems;
 @end
 
 @implementation SidebarViewController
+@synthesize searchBar;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    searchBar.text = cell.textLabel.text;
+    
+    [autocompleteSuggestions removeAllObjects];
+    [self.tableView reloadData];
+    
+    // Volat internet conneciton
+    NSArray *parameters = [searchBar.text componentsSeparatedByString:@","];
+    
+    
+    internetConnection = [[InternetConnection alloc] init];
+    [internetConnection postWithParameters: @"address=Praha"];
+}
+
+
 - (void)viewDidLoad
 {
-    internetConnection = [[InternetConnection alloc] init];
-    
-    [internetConnection postWithParameters: @"address=Praha"];
-    
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
     self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
     
-    //_menuItems = @[@"title", @"news", @"map", @"photo"];
-    
-    _menuItems = [[NSMutableArray alloc] init];
-    [_menuItems addObject:@"title"];
-    [_menuItems addObject:@"news"];
-    [_menuItems addObject:@"map"];
-    [_menuItems addObject:@"photo"];
+    _menuItems = @[@"title", @"news", @"map", @"photo"];
+    autocompleteSuggestions = [[NSMutableArray alloc] init];
 
     
-    NSMutableArray *tempArray = [[NSMutableArray alloc] init];
-    
-    //int i = 0;
-    //for (NSArray *count in bonjourMachines)
-    for (int i = 0; i < 1; i++)
-    {
-        //[tempArray addObject:[NSIndexPath indexPathForRow:i++ inSection:0]];
-        //[self.menuItems addObject: @"pica"];
-    }
-    
-    [[self tableView] beginUpdates];
-    //[[self tableView] insertRowsAtIndexPaths:(NSArray *)tempArray withRowAnimation:UITableViewRowAnimationNone];
-    [[self tableView] endUpdates];
+//    [self.tableView beginUpdates];
+//        NSIndexPath *path1 = [NSIndexPath indexPathForRow:1 inSection:0]; //ALSO TRIED WITH indexPathRow:0
+//        NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
+//        [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationNone];
+//    [self.tableView endUpdates];
 }
 
 - (void)didReceiveMemoryWarning
@@ -79,15 +79,21 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [self.menuItems count];
+    //NSLog(@"%i",autocompleteSuggestions.count);
+    return autocompleteSuggestions.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellIdentifier = [self.menuItems objectAtIndex:indexPath.row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    NSLog(@"Row: %i", indexPath.row);
+    cell.textLabel.text = [autocompleteSuggestions objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -116,7 +122,63 @@
         };
         
     }
-    
 }
+
+#pragma mark - UITableViewDelegate Methods
+- (void)tableView:(UITableView *)tableView:(NSIndexPath *)indexPath {
+    searchBar.text = [autocompleteSuggestions objectAtIndex:indexPath.row];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    if(searchText.length > 0)
+    {
+        [searchText stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+        [searchText stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
+        NSURL *url = [NSURL URLWithString:@"https://maps.googleapis.com/maps/api/place/autocomplete/"];
+        
+        NSDictionary *params = @{@"input" : [searchText stringByReplacingOccurrencesOfString:@" " withString:@"+"],
+                                 //@"location" : [NSString stringWithFormat:@"%f,%f", searchCoordinate.latitude, searchCoordinate.longitude],
+                                 @"sensor" : @"false",
+                                 //                           @"language" : @"pt_BR",
+                                 //@"types" : @"(cities)",
+                                 //@"components" : @"",
+                                 @"key" : @"AIzaSyDxGJ0un1MY7TmxzqYujcTcSfQAxrjVKKU"};
+        
+        AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+        [httpClient setParameterEncoding:AFFormURLParameterEncoding];
+        
+        [httpClient getPath:@"json"
+                 parameters:params
+                    success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                        
+                        NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+                        
+                        
+                        [autocompleteSuggestions removeAllObjects];
+                        
+                        NSArray* array = [JSON objectForKey:@"predictions"];
+                        for(int i = 0; i < [array count]; i++)
+                        {
+                            [autocompleteSuggestions addObject:[[array objectAtIndex:i] valueForKey:@"description"]]; //componentsSeparatedByString:@","] objectAtIndex:0]];
+                            
+                            NSLog(@"%@", [autocompleteSuggestions objectAtIndex:i]);
+                        }
+                        
+                        
+                        [self.tableView reloadData];
+                    }
+                    failure:^(AFHTTPRequestOperation *operation, NSError *errorResponse) {
+                        NSLog(@"[HTTPClient Error]: %@ for URL %@", [errorResponse localizedDescription], [[[operation request] URL] path]);
+                    }];
+    }
+    else
+    {
+        [autocompleteSuggestions removeAllObjects];
+        [self.tableView reloadData];
+    }
+}
+
+
 
 @end
