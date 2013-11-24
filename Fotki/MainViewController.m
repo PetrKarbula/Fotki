@@ -68,7 +68,7 @@
 
 - (void) postWithParameters :(NSString*) parameters
 {
-    self.progress.hidden = NO;
+    //self.progress.hidden = NO;
     NSString *post = parameters;//[NSString stringWithFormat:@"bla bla bla %i",1];
     //NSLog(@"%@", post);
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
@@ -87,9 +87,7 @@
     [NSURLConnection sendAsynchronousRequest:req queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
      {
          if ([data length] > 0 && error == nil)
-         {
-             NSString* answer = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-             
+         {             
              NSError *error = nil;
              fotkis = [FotkiBuilder fotkiDataFromJSON:data error:&error];
 

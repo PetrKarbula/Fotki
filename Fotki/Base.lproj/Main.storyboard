@@ -109,32 +109,35 @@
                         <viewControllerLayoutGuide type="top" id="IzO-xW-yks"/>
                         <viewControllerLayoutGuide type="bottom" id="woI-6Z-pOG"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IvD-DB-rzT">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="J4o-5z-N3J">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9k7-hK-5yW">
-                                <rect key="frame" x="209" y="159" width="150" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3cS-Yo-cxp">
-                                <rect key="frame" x="0.0" y="66" width="568" height="210"/>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Idx-WL-1Ua">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FpP-TY-XN3">
-                                    <size key="itemSize" width="560" height="200"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gex-Aq-v4C">
+                                    <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="7aF-RO-BPj" id="AUq-fz-gnm"/>
-                                    <outlet property="delegate" destination="7aF-RO-BPj" id="pAK-um-iMl"/>
+                                    <outlet property="dataSource" destination="7aF-RO-BPj" id="B9C-Jq-BR0"/>
+                                    <outlet property="delegate" destination="7aF-RO-BPj" id="qWS-23-dlz"/>
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Idx-WL-1Ua" firstAttribute="top" secondItem="J4o-5z-N3J" secondAttribute="top" id="7MM-EC-Kmz"/>
+                            <constraint firstItem="Idx-WL-1Ua" firstAttribute="leading" secondItem="J4o-5z-N3J" secondAttribute="leading" id="crW-Iw-iDX"/>
+                            <constraint firstItem="Idx-WL-1Ua" firstAttribute="bottom" secondItem="J4o-5z-N3J" secondAttribute="bottom" id="heS-ln-b0e"/>
+                            <constraint firstItem="Idx-WL-1Ua" firstAttribute="trailing" secondItem="J4o-5z-N3J" secondAttribute="trailing" id="yZE-kq-FaY"/>
+                        </constraints>
+                        <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                        <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="fTQ-gJ-Rc9">
@@ -143,9 +146,9 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="collectionView" destination="3cS-Yo-cxp" id="wgj-k2-8DA"/>
-                        <outlet property="progress" destination="9k7-hK-5yW" id="xn4-4f-tAW"/>
+                        <outlet property="collectionView" destination="Idx-WL-1Ua" id="iQw-Up-er8"/>
                         <outlet property="sidebarButton" destination="zI5-vB-EZo" id="Hhk-hq-NEm"/>
+                        <outlet property="view" destination="J4o-5z-N3J" id="1mO-8h-dPL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Y1-fK-RyL" sceneMemberID="firstResponder"/>
