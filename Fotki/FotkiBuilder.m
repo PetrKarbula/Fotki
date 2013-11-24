@@ -24,7 +24,7 @@
     NSMutableArray *fotkis = [[NSMutableArray alloc] init];
     
     NSArray *results = [parsedObject valueForKey:@"fotki"];
-    NSLog(@"Count %d", results.count);
+    NSLog(@"Count %d", (int)results.count);
     
     for (NSDictionary *groupDic in results) {
         FotkiData *fotkiData = [[FotkiData alloc] init];
