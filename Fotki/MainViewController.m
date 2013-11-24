@@ -42,6 +42,9 @@
     self.progress.hidden = YES;
     self.collectionView.hidden = YES;
     
+
+    
+    
     [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTextColor:[[UIColor alloc] initWithRed: 219 / 255.f green: 219 / 255.f blue: 219 / 255.f alpha:1.f]];
     self.collectionView.delegate = self;
 }
@@ -67,13 +70,69 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(IBAction)likeClicked:(id)sender
+{
+    int photo_id;
+    for (UICollectionViewCell *cell in [self.collectionView visibleCells])
+    {
+        
+        NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+    
+        FotkiData *f =  [fotkis objectAtIndex:[indexPath indexAtPosition:1]];
+        photo_id = [f.photo_id intValue];
+    }
+    [self photoAction:[NSString stringWithFormat:@"action=like&photo_id=%i",photo_id]];
+}
 #pragma mark Internet Connection
+
+
+- (void) photoAction :(NSString*) params
+{
+
+    NSString *post = params;//[NSString stringWithFormat:@"%@&set=%i",parameters,set];
+    NSLog(@"%@", post);
+    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+    
+    NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+    
+    NSMutableURLRequest *req = [[NSMutableURLRequest alloc] init];
+    [req setURL:[NSURL URLWithString:@"http://division.craneballs.com/fotki/photo_action.php"]];
+    [req setHTTPMethod:@"POST"];
+    [req setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [req setValue:@"application/x-www-form-urlencoded"forHTTPHeaderField:@"Content-Type"];
+    [req setHTTPBody:postData];
+    
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    [NSURLConnection sendAsynchronousRequest:req queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+     {
+         if ([data length] > 0 && error == nil)
+         {
+             NSString* answer = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+             NSLog(@"Server Answer: %@",answer);
+         }
+         else if ([data length] == 0 && error == nil)
+         {
+             
+             
+         }
+         else if (error != nil)
+         {
+             NSLog(@"%@",error.description);
+             
+         }
+         
+     }];
+    
+    
+}
+
 
 - (void) postWithParameters :(NSString*) parameters removePictures:(BOOL)remove
 {
     if(remove)
     {
+        
         [fotkis removeAllObjects];
         [self.collectionView reloadData];
     }

@@ -22,8 +22,9 @@
 		6D8B68C01841B8E000A7769F /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68B01841B8E000A7769F /* UIImage+MultiFormat.m */; };
 		6D8B68C11841B8E000A7769F /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68B21841B8E000A7769F /* UIImage+WebP.m */; };
 		6D8B68C21841B8E000A7769F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68B41841B8E000A7769F /* UIImageView+WebCache.m */; };
-		6D8B68C41841C2C000A7769F /* Icon76.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B68C31841C2C000A7769F /* Icon76.png */; };
 		6D8B68C61841C35600A7769F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B68C51841C35600A7769F /* Default.png */; };
+		6D8B68DC1841DE2F00A7769F /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B68DB1841DE2F00A7769F /* AppIcon.png */; };
+		6D8B68E01841E03E00A7769F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B68DF1841E03E00A7769F /* Default@2x.png */; };
 		E41A021F1841502E006EB6A3 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A020D1841502E006EB6A3 /* AFHTTPClient.m */; };
 		E41A02201841502E006EB6A3 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A020F1841502E006EB6A3 /* AFHTTPRequestOperation.m */; };
 		E41A02211841502E006EB6A3 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A02111841502E006EB6A3 /* AFImageRequestOperation.m */; };
@@ -121,8 +122,9 @@
 		6D8B68B21841B8E000A7769F /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
 		6D8B68B31841B8E000A7769F /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		6D8B68B41841B8E000A7769F /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
-		6D8B68C31841C2C000A7769F /* Icon76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon76.png; sourceTree = "<group>"; };
 		6D8B68C51841C35600A7769F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6D8B68DB1841DE2F00A7769F /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+		6D8B68DF1841E03E00A7769F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E41A020C1841502E006EB6A3 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		E41A020D1841502E006EB6A3 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		E41A020E1841502E006EB6A3 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -361,7 +363,8 @@
 			isa = PBXGroup;
 			children = (
 				6D8B68C51841C35600A7769F /* Default.png */,
-				6D8B68C31841C2C000A7769F /* Icon76.png */,
+				6D8B68DF1841E03E00A7769F /* Default@2x.png */,
+				6D8B68DB1841DE2F00A7769F /* AppIcon.png */,
 				E44235AD184142F300A8874D /* FotkiBuilder.h */,
 				E44235AE184142F300A8874D /* FotkiBuilder.m */,
 				E44235A61841402800A8874D /* FotkiData.h */,
@@ -524,7 +527,6 @@
 				E44235721840FC3F00A8874D /* photo_photo.jpg in Resources */,
 				6D8B68C61841C35600A7769F /* Default.png in Resources */,
 				E44235771840FC3F00A8874D /* menu@2x.png in Resources */,
-				6D8B68C41841C2C000A7769F /* Icon76.png in Resources */,
 				E442357A1840FC3F00A8874D /* photo.png in Resources */,
 				E44235741840FC3F00A8874D /* comments_photo.jpg in Resources */,
 				E442357C1840FC3F00A8874D /* tag_photo.jpg in Resources */,
@@ -533,6 +535,7 @@
 				E44235701840FC3F00A8874D /* bookmark_photo.jpg in Resources */,
 				E44235791840FC3F00A8874D /* news.png in Resources */,
 				E442357B1840FC3F00A8874D /* tag.png in Resources */,
+				6D8B68E01841E03E00A7769F /* Default@2x.png in Resources */,
 				E44235711840FC3F00A8874D /* calendar.png in Resources */,
 				E44235751840FC3F00A8874D /* map.png in Resources */,
 				E41A023A1841655E006EB6A3 /* Oceania in Resources */,
@@ -540,6 +543,7 @@
 				E41A02381841655E006EB6A3 /* Europe in Resources */,
 				E442356F1840FC3F00A8874D /* bookmark.png in Resources */,
 				E44235731840FC3F00A8874D /* comments.png in Resources */,
+				6D8B68DC1841DE2F00A7769F /* AppIcon.png in Resources */,
 				E41A02391841655E006EB6A3 /* North America in Resources */,
 				E442357E1840FC3F00A8874D /* wishlist_photo.jpg in Resources */,
 				E44235761840FC3F00A8874D /* menu.png in Resources */,
@@ -715,8 +719,6 @@
 		E487BA0B1840E3970076D64E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -740,8 +742,6 @@
 		E487BA0C1840E3970076D64E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

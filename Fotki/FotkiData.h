@@ -14,7 +14,7 @@
 }
 
 @property (strong, nonatomic) NSString *url;
-@property (strong, nonatomic) NSString *id;
+@property (strong, nonatomic) NSString *photo_id;
 @property (strong, nonatomic) NSString *lat;
 @property (strong, nonatomic) NSString *lon;
 @property (strong, nonatomic) NSString *country;
