@@ -161,6 +161,11 @@
         [fotkis removeAllObjects];
         [self.collectionView reloadData];
     }
+    spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(512, self.view.bounds.size.height * 0.5, 0, 0)];
+    spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    [spinner startAnimating];
+   
+    [self.view addSubview:spinner];
     currectSearch = parameters;
     downloadInProgress = YES;
     //self.progress.hidden = NO;
@@ -250,7 +255,7 @@
                  NSLog(@"saving image done");
                  self.progress.hidden = YES;
                  self.collectionView.hidden = NO;
-                 
+                 [spinner removeFromSuperview];
                  [self.backgroundView removeFromSuperview];
                  [self.collectionView reloadData];
              }
@@ -288,11 +293,11 @@
     for (UICollectionViewCell *cell in [self.collectionView visibleCells]) {
         NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
         NSLog(@"%@ z %i",indexPath,[fotkis count]);
-        if([indexPath indexAtPosition:1] > (int)([fotkis count]/2))
+        if([indexPath indexAtPosition:1] >= ([fotkis count]-1))//(int)([fotkis count]/2))
         {
             if(!downloadInProgress) {
                 set++;
-                [self postWithParameters:currectSearch removePictures:NO];
+                [self postWithParameters:currectSearch removePictures:YES];
             }
         }
         

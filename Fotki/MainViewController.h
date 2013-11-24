@@ -7,6 +7,7 @@
     NSString *currectSearch;
     BOOL downloadInProgress;
     int set;
+    UIActivityIndicatorView *spinner;
 }
 
 @property(nonatomic, weak) IBOutlet UICollectionView *collectionView;
