@@ -35,7 +35,7 @@
 }
 
 -(void)updateCell {
-    [self.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    [self.imageView setContentMode:UIViewContentModeScaleAspectFill];
     [self.imageView setImage:self.image];
 }
 

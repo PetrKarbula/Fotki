@@ -6,23 +6,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomGalleryCell"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="THu-Gd-t4c" customClass="CustomGalleryCell">
-            <rect key="frame" x="0.0" y="0.0" width="300" height="528"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="psA-Nd-4Df" customClass="CustomGalleryCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="300" height="528"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1bt-it-iXY">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="528"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlN-Bb-Ano">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <size key="customSize" width="295" height="259"/>
+            <constraints>
+                <constraint firstItem="YlN-Bb-Ano" firstAttribute="top" secondItem="psA-Nd-4Df" secondAttribute="top" id="1vg-vk-Xlj"/>
+                <constraint firstItem="YlN-Bb-Ano" firstAttribute="bottom" secondItem="psA-Nd-4Df" secondAttribute="bottom" id="Aj3-gK-8DU"/>
+                <constraint firstItem="YlN-Bb-Ano" firstAttribute="trailing" secondItem="psA-Nd-4Df" secondAttribute="trailing" id="kaG-6L-RgG"/>
+                <constraint firstItem="YlN-Bb-Ano" firstAttribute="leading" secondItem="psA-Nd-4Df" secondAttribute="leading" id="qfj-k6-QC8"/>
+            </constraints>
             <connections>
-                <outlet property="imageView" destination="1bt-it-iXY" id="h3q-d0-zSQ"/>
+                <outlet property="imageView" destination="YlN-Bb-Ano" id="tkW-4z-bnb"/>
             </connections>
         </collectionViewCell>
     </objects>
