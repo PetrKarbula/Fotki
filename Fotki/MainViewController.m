@@ -27,8 +27,8 @@
     
     [self setupCollectionView];
         
-    fotkis = [[NSArray alloc] init];
-    
+    fotkis = [[NSMutableArray alloc] init];
+    currectSearch = [[NSString alloc] init];
     // Change button color
     _sidebarButton.tintColor = [UIColor colorWithWhite:0.5f alpha:1.0f];
     
@@ -41,6 +41,7 @@
     
     self.progress.hidden = YES;
     self.collectionView.hidden = YES;
+    self.collectionView.delegate = self;
 }
 
 -(void)setupCollectionView {
@@ -67,11 +68,18 @@
 
 #pragma mark Internet Connection
 
-- (void) postWithParameters :(NSString*) parameters
+- (void) postWithParameters :(NSString*) parameters removePictures:(BOOL)remove
 {
+    if(remove)
+    {
+        [fotkis removeAllObjects];
+        [self.collectionView reloadData];
+    }
+    currectSearch = parameters;
+    downloadInProgress = YES;
     //self.progress.hidden = NO;
-    NSString *post = parameters;//[NSString stringWithFormat:@"bla bla bla %i",1];
-    //NSLog(@"%@", post);
+    NSString *post = [NSString stringWithFormat:@"%@&set=%i",parameters,set];
+    NSLog(@"%@", post);
     NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
     
     NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
@@ -90,9 +98,10 @@
          if ([data length] > 0 && error == nil)
          {             
              NSError *error = nil;
-             fotkis = [FotkiBuilder fotkiDataFromJSON:data error:&error];
 
+             [fotkis addObjectsFromArray:[FotkiBuilder fotkiDataFromJSON:data error:&error]];
              [self downloadAndSaveImg];
+             downloadInProgress = NO;
          }
          else if ([data length] == 0 && error == nil)
          {
@@ -114,6 +123,8 @@
 {
     for (FotkiData *dataFotki in fotkis) //FotkiData *data in fotkis
     {
+        if(dataFotki.downloaded)
+            continue;
         //FotkiData *data = [fotkis objectAtIndex:i];
         NSLog(@"Downloading...");
         // Get an image from the URL below
@@ -184,6 +195,20 @@
     [cell updateCell];
     
     return cell;
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    for (UICollectionViewCell *cell in [self.collectionView visibleCells]) {
+        NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
+        NSLog(@"%@ z %i",indexPath,[fotkis count]);
+        if([indexPath indexAtPosition:1] > (int)([fotkis count]/2))
+        {
+            if(!downloadInProgress) {
+                set++;
+                [self postWithParameters:currectSearch removePictures:NO];
+            }
+        }
+    }
 }
 
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:

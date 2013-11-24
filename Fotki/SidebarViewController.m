@@ -44,7 +44,7 @@
                 AppDelegate *delegate = (AppDelegate*)
                 [[UIApplication sharedApplication] delegate];
                 
-                [delegate.mainView postWithParameters:[self addressBuilder]];
+                [delegate.mainView postWithParameters:[self addressBuilder] removePictures:YES];
                 
                 [self .revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
             }
@@ -68,7 +68,7 @@
         AppDelegate *delegate = (AppDelegate*)
         [[UIApplication sharedApplication] delegate];
         
-        [delegate.mainView postWithParameters:[self addressBuilder]];
+        [delegate.mainView postWithParameters:[self addressBuilder] removePictures:YES];
         
         [self .revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
     }
@@ -178,6 +178,13 @@
     UIGraphicsEndImageContext();
     
     return image;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender

@@ -19,5 +19,7 @@
 @property (strong, nonatomic) NSString *lon;
 @property (strong, nonatomic) NSString *country;
 @property (strong, nonatomic) UIImage  *image;
+@property (nonatomic, assign) BOOL  downloaded;
+
 
 @end
