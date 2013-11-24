@@ -40,6 +40,8 @@
     
     self.progress.hidden = YES;
     self.collectionView.hidden = YES;
+    
+    [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTextColor:[[UIColor alloc] initWithRed: 219 / 255.f green: 219 / 255.f blue: 219 / 255.f alpha:1.f]];
 }
 
 -(void)setupCollectionView {

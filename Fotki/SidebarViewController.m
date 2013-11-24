@@ -51,7 +51,7 @@
         }
         else
         {
-            NSLog(@"%i", indexPath.row);
+            //NSLog(@"%i", indexPath.row);
             autocompleteSuggestions = [[NSMutableArray alloc] initWithArray:[countryArray objectAtIndex:indexPath.row] copyItems:YES];
             [self.tableView reloadData];
             inSubMenu = YES;
@@ -102,11 +102,18 @@
     
     delegate.sideBarView = self;
     
-    self.view.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
-    self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
-    self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
+    //self.view.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
+    //self.tableView.backgroundColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
+    //self.tableView.separatorColor = [UIColor colorWithWhite:0.15f alpha:0.2f];
     
-    _menuItems = @[@"title", @"news", @"map", @"photo"];
+    self.view.backgroundColor = [[UIColor alloc] initWithRed:50 / 255.f green:50 / 255.f blue:50 / 255.f alpha:1.f];;
+    UIImage *backgroundImage = [[UIImage alloc]init];
+    backgroundImage = [UIImage imageNamed:@"pozadi_menu.png"];
+    
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
+    [backgroundImageView setFrame:CGRectMake(self.view.frame.size.width * 0.25 , self.view.frame.size.height * 0.15,[backgroundImage size].width * 0.3 , [backgroundImage size].height * 0.3)];
+    [self.view addSubview:backgroundImageView];
+    
     autocompleteSuggestions = [[NSMutableArray alloc] init];
     
     continentsArray = [[NSMutableArray alloc] init];
@@ -158,6 +165,7 @@
     cell.textLabel.textColor = [[UIColor alloc] initWithRed: 219 / 255.f green: 219 / 255.f blue: 219 / 255.f alpha:1.f];
     
     cell.backgroundColor = [[UIColor alloc] initWithRed:50 / 255.f green:50 / 255.f blue:50 / 255.f alpha:0.f];
+    
     
     UIView *selectionColor = [[UIView alloc] init];
     selectionColor.backgroundColor = [UIColor colorWithRed:(39/255.0) green:(39/255.0) blue:(39/255.0) alpha:1];
