@@ -152,9 +152,32 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    NSLog(@"Row: %i", indexPath.row);
-    cell.textLabel.text = [autocompleteSuggestions objectAtIndex:indexPath.row];
+    //NSLog(@"Row: %i", indexPath.row);
+    // GUI STYLE
+    cell.textLabel.text = [autocompleteSuggestions objectAtIndex:indexPath.row]; //219
+    cell.textLabel.textColor = [[UIColor alloc] initWithRed: 219 / 255.f green: 219 / 255.f blue: 219 / 255.f alpha:1.f];
+    
+    cell.backgroundColor = [[UIColor alloc] initWithRed:50 / 255.f green:50 / 255.f blue:50 / 255.f alpha:1.f];
+    
+    UIView *selectionColor = [[UIView alloc] init];
+    selectionColor.backgroundColor = [UIColor colorWithRed:(39/255.0) green:(39/255.0) blue:(39/255.0) alpha:1];
+    cell.selectedBackgroundView = selectionColor;
+    
     return cell;
+}
+
+- (UIImage *)imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
