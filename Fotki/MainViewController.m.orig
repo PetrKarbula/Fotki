@@ -41,9 +41,12 @@
     
     self.progress.hidden = YES;
     self.collectionView.hidden = YES;
+<<<<<<< HEAD
+    self.collectionView.delegate = self;
+=======
     
     [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTextColor:[[UIColor alloc] initWithRed: 219 / 255.f green: 219 / 255.f blue: 219 / 255.f alpha:1.f]];
-    self.collectionView.delegate = self;
+>>>>>>> 93a3a77b9b3f1eea1c559b72316345430a440699
 }
 
 -(void)setupCollectionView {

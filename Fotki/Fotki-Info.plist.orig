@@ -37,7 +37,11 @@
 	<key>UIStatusBarHidden~ipad</key>
 	<true/>
 	<key>UIStatusBarStyle</key>
+<<<<<<< HEAD
+	<string>UIStatusBarStyleDefault</string>
+=======
 	<string>UIStatusBarStyleBlackTranslucent</string>
+>>>>>>> 93a3a77b9b3f1eea1c559b72316345430a440699
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationLandscapeRight</string>
