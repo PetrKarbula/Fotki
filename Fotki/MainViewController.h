@@ -7,11 +7,7 @@
 
 @property(nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @property(nonatomic, strong) IBOutlet UIProgressView *progress;
-@property(nonatomic, strong) IBOutlet UIImage *shitImage;
-@property(nonatomic, strong) IBOutlet UIImageView *shitImageView;
-
-
-
+@property (nonatomic) int currentIndex;
 
 - (void) postWithParameters :(NSString*) parameters;
 - (void) downloadAndSaveImg;
