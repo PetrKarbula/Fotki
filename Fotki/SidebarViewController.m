@@ -23,6 +23,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    AppDelegate *delegate = (AppDelegate*)
+    [[UIApplication sharedApplication] delegate];
+    
     if(usingDefault)
     {
         if(inSubMenu)
@@ -32,6 +35,8 @@
             {
                 autocompleteSuggestions = [[NSMutableArray alloc] initWithArray:continentsArray copyItems:YES];
                 [self.tableView reloadData];
+                
+                [delegate.mainView removeLastBtnFromCountryParts];
             }
             else
             {
@@ -41,16 +46,18 @@
                 [autocompleteSuggestions removeAllObjects];
                 [self.tableView reloadData];
                 
-                AppDelegate *delegate = (AppDelegate*)
-                [[UIApplication sharedApplication] delegate];
-                
                 [delegate.mainView postWithParameters:[self addressBuilder]];
                 
                 [self .revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
+                
+                
+                [delegate.mainView addButtonToCountryParts:cell.textLabel.text];
             }
         }
         else
         {
+            [delegate.mainView addButtonToCountryParts:[self.tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+            
             //NSLog(@"%i", indexPath.row);
             autocompleteSuggestions = [[NSMutableArray alloc] initWithArray:[countryArray objectAtIndex:indexPath.row] copyItems:YES];
             [self.tableView reloadData];
@@ -64,9 +71,6 @@
         
         [autocompleteSuggestions removeAllObjects];
         [self.tableView reloadData];
-        
-        AppDelegate *delegate = (AppDelegate*)
-        [[UIApplication sharedApplication] delegate];
         
         [delegate.mainView postWithParameters:[self addressBuilder]];
         
@@ -168,7 +172,8 @@
     
     
     UIView *selectionColor = [[UIView alloc] init];
-    selectionColor.backgroundColor = [UIColor colorWithRed:(39/255.0) green:(39/255.0) blue:(39/255.0) alpha:1];
+    selectionColor.backgroundColor = [UIColor colorWithRed:(39/255.f) green:(39/255.f) blue:(39/255.f) alpha:1.f];
+    selectionColor.opaque = true;
     cell.selectedBackgroundView = selectionColor;
     
     return cell;
@@ -322,7 +327,8 @@
     }
     
     [countryArray addObject:tmpArray];
-    [tmpArray removeAllObjects];
+    //[tmpArray removeAllObjects];
+    tmpArray = [[NSMutableArray alloc] init];
     
     continentsPath = [[NSBundle mainBundle] pathForResource:@"South America" ofType:@""];
     fileContents = [NSString stringWithContentsOfFile:continentsPath encoding:NSUTF8StringEncoding error:NULL];

@@ -11,6 +11,7 @@
 @interface MainViewController ()
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navItem;
 
 @end
 
@@ -43,6 +44,10 @@
     self.collectionView.hidden = YES;
     
     [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTextColor:[[UIColor alloc] initWithRed: 219 / 255.f green: 219 / 255.f blue: 219 / 255.f alpha:1.f]];
+    
+    countryParts = [[NSMutableArray alloc] init];
+    
+    //[countryParts addObject: _navItem.leftBarButtonItems];
 }
 
 -(void)setupCollectionView {
@@ -214,6 +219,33 @@
         [self.collectionView setAlpha:1.0f];
     }];
     
+}
+
+- (void) addButtonToCountryParts:(NSString *)btnName
+{
+    UIBarButtonItem *tmpBtn = [[UIBarButtonItem alloc] initWithTitle:btnName
+                                                                     style:UIBarButtonItemStyleDone target:nil action:nil];
+    
+    tmpBtn.tintColor =[[UIColor alloc] initWithRed: 0 green: 0 blue: 0 alpha:1.f];
+    
+    [countryParts addObject:tmpBtn];
+    
+    _navItem.leftBarButtonItems = (NSArray*)countryParts;
+    
+    //[buttons addObject:tmpBtn];
+    
+    
+    //_navItem.leftBarButtonItems = (NSArray*)buttons;
+}
+
+- (void) removeLastBtnFromCountryParts
+{
+    if ([countryParts count] > 0)
+    {
+        [countryParts removeLastObject];
+        
+        _navItem.leftBarButtonItems = (NSArray*)countryParts;
+    }
 }
 
 @end
