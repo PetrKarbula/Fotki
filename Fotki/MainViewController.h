@@ -8,6 +8,9 @@
     BOOL downloadInProgress;
     int set;
     UIActivityIndicatorView *spinner;
+    UIImageView *fakemap;
+    
+    int state;
 }
 
 @property(nonatomic, weak) IBOutlet UICollectionView *collectionView;

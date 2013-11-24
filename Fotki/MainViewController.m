@@ -65,6 +65,54 @@
 
     self.collectionView.delegate = self;
     
+    UIImage *fake = [UIImage imageNamed:@"fotki_ipad_mapa.png"];
+
+    
+    fakemap = [[UIImageView alloc] initWithImage:fake];
+    
+    // Swipe Left
+    UISwipeGestureRecognizer * Swipeup=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeup:)];
+    Swipeup.direction=UISwipeGestureRecognizerDirectionUp;
+    [self.view addGestureRecognizer:Swipeup];
+    
+    
+    // SwipeRight
+    UISwipeGestureRecognizer * Swipedown=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipedown:)];
+    Swipedown.direction=UISwipeGestureRecognizerDirectionDown;
+    [self.view addGestureRecognizer:Swipedown];
+    [fakemap setFrame:CGRectMake( 0.0f, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height)]; //notice this is OFF screen!
+   
+        [self.view addSubview:fakemap];
+}
+
+
+-(void)swipeup:(UISwipeGestureRecognizer*)gestureRecognizer
+{
+    if(state == 1)
+        return;
+    [fakemap setFrame:CGRectMake( 0.0f, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height)]; //notice this is OFF screen!
+    [UIView beginAnimations:@"animateTableView" context:nil];
+    [UIView setAnimationDuration:0.2];
+    [fakemap setFrame:CGRectMake( 0.0f, 0.0f, self.view.frame.size.width, self.view.frame.size.height)]; //notice this is ON screen!
+    [UIView commitAnimations];
+    state = 1;
+    //Do what you want here
+
+}
+
+-(void)swipedown:(UISwipeGestureRecognizer*)gestureRecognizer
+{
+    if(state == 0)
+        return;
+    [fakemap setFrame:CGRectMake( 0.0f, 0, self.view.frame.size.width, self.view.frame.size.height)]; //notice this is OFF screen!
+    [UIView beginAnimations:@"animateTableView" context:nil];
+    [UIView setAnimationDuration:0.2];
+    [fakemap setFrame:CGRectMake( 0.0f, self.view.frame.size.height, self.view.frame.size.width, self.view.frame.size.height)]; //notice this is ON screen!
+    [UIView commitAnimations];
+    state = 0;
+    //Do what you want here
+    //[fakemap removeFromSuperview];
+    
 }
 
 -(void)setupCollectionView {
@@ -161,7 +209,7 @@
         [fotkis removeAllObjects];
         [self.collectionView reloadData];
     }
-    spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(512, self.view.bounds.size.height * 0.5, 0, 0)];
+    spinner = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(self.view.frame.size.width*0.5f, self.view.bounds.size.height * 0.5f, 0, 0)];
     spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
     [spinner startAnimating];
    

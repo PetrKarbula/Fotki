@@ -226,7 +226,7 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [searchBar resignFirstResponder];
-    //[delegate.mainView postWithParameters:[searchBar text] removePictures:YES];
+    //[delegate.mainView postWithParameters:searchBar  searchBar.te removePictures:YES];
     
     //[self .revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
 
