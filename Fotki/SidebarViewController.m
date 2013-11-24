@@ -187,7 +187,7 @@
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     if(searchText.length > 0)
     {
-        //usingDefault = NO;
+        usingDefault = NO;
         [searchText stringByReplacingOccurrencesOfString:@" " withString:@"+"];
         [searchText stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         
