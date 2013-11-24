@@ -20,7 +20,7 @@
 		E41A02361841655E006EB6A3 /* Asia in Resources */ = {isa = PBXBuildFile; fileRef = E41A022E1841655E006EB6A3 /* Asia */; };
 		E41A02371841655E006EB6A3 /* Continents in Resources */ = {isa = PBXBuildFile; fileRef = E41A022F1841655E006EB6A3 /* Continents */; };
 		E41A02381841655E006EB6A3 /* Europe in Resources */ = {isa = PBXBuildFile; fileRef = E41A02301841655E006EB6A3 /* Europe */; };
-		E41A02391841655E006EB6A3 /* NorthAmerica in Resources */ = {isa = PBXBuildFile; fileRef = E41A02311841655E006EB6A3 /* NorthAmerica */; };
+		E41A02391841655E006EB6A3 /* North America in Resources */ = {isa = PBXBuildFile; fileRef = E41A02311841655E006EB6A3 /* North America */; };
 		E41A023A1841655E006EB6A3 /* Oceania in Resources */ = {isa = PBXBuildFile; fileRef = E41A02321841655E006EB6A3 /* Oceania */; };
 		E41A023B1841655E006EB6A3 /* South America in Resources */ = {isa = PBXBuildFile; fileRef = E41A02331841655E006EB6A3 /* South America */; };
 		E44235561840F60000A8874D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44235551840F60000A8874D /* SWRevealViewController.m */; };
@@ -97,7 +97,7 @@
 		E41A022E1841655E006EB6A3 /* Asia */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Asia; sourceTree = "<group>"; };
 		E41A022F1841655E006EB6A3 /* Continents */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Continents; sourceTree = "<group>"; };
 		E41A02301841655E006EB6A3 /* Europe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Europe; sourceTree = "<group>"; };
-		E41A02311841655E006EB6A3 /* NorthAmerica */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NorthAmerica; sourceTree = "<group>"; };
+		E41A02311841655E006EB6A3 /* North America */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "North America"; sourceTree = "<group>"; };
 		E41A02321841655E006EB6A3 /* Oceania */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Oceania; sourceTree = "<group>"; };
 		E41A02331841655E006EB6A3 /* South America */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "South America"; sourceTree = "<group>"; };
 		E44235541840F60000A8874D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 				E41A022E1841655E006EB6A3 /* Asia */,
 				E41A022F1841655E006EB6A3 /* Continents */,
 				E41A02301841655E006EB6A3 /* Europe */,
-				E41A02311841655E006EB6A3 /* NorthAmerica */,
+				E41A02311841655E006EB6A3 /* North America */,
 				E41A02321841655E006EB6A3 /* Oceania */,
 				E41A02331841655E006EB6A3 /* South America */,
 			);
@@ -441,7 +441,7 @@
 				E41A02381841655E006EB6A3 /* Europe in Resources */,
 				E442356F1840FC3F00A8874D /* bookmark.png in Resources */,
 				E44235731840FC3F00A8874D /* comments.png in Resources */,
-				E41A02391841655E006EB6A3 /* NorthAmerica in Resources */,
+				E41A02391841655E006EB6A3 /* North America in Resources */,
 				E442357E1840FC3F00A8874D /* wishlist_photo.jpg in Resources */,
 				E44235761840FC3F00A8874D /* menu.png in Resources */,
 				E41A023B1841655E006EB6A3 /* South America in Resources */,

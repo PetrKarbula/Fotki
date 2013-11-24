@@ -17,22 +17,61 @@
     self = [super initWithStyle:style];
     if (self) {
     }
+    
     return self;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    searchBar.text = cell.textLabel.text;
     
-    [autocompleteSuggestions removeAllObjects];
-    [self.tableView reloadData];
-
-    AppDelegate *delegate = (AppDelegate*)
-    [[UIApplication sharedApplication] delegate];
-
-    [delegate.mainView postWithParameters:[self addressBuilder]];
-    
-    [self .revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
+    if(usingDefault)
+    {
+        if(inSubMenu)
+        {
+            inSubMenu = NO;
+            if(indexPath.row == 0)
+            {
+                autocompleteSuggestions = [[NSMutableArray alloc] initWithArray:continentsArray copyItems:YES];
+                [self.tableView reloadData];
+            }
+            else
+            {
+                UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+                searchBar.text = cell.textLabel.text;
+                
+                [autocompleteSuggestions removeAllObjects];
+                [self.tableView reloadData];
+                
+                AppDelegate *delegate = (AppDelegate*)
+                [[UIApplication sharedApplication] delegate];
+                
+                [delegate.mainView postWithParameters:[self addressBuilder]];
+                
+                [self .revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
+            }
+        }
+        else
+        {
+            NSLog(@"%i", indexPath.row);
+            autocompleteSuggestions = [[NSMutableArray alloc] initWithArray:[countryArray objectAtIndex:indexPath.row] copyItems:YES];
+            [self.tableView reloadData];
+            inSubMenu = YES;
+        }
+    }
+    else
+    {
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        searchBar.text = cell.textLabel.text;
+        
+        [autocompleteSuggestions removeAllObjects];
+        [self.tableView reloadData];
+        
+        AppDelegate *delegate = (AppDelegate*)
+        [[UIApplication sharedApplication] delegate];
+        
+        [delegate.mainView postWithParameters:[self addressBuilder]];
+        
+        [self .revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
+    }
 }
 
 - (NSString*) addressBuilder
@@ -64,6 +103,12 @@
     
     _menuItems = @[@"title", @"news", @"map", @"photo"];
     autocompleteSuggestions = [[NSMutableArray alloc] init];
+    
+    continentsArray = [[NSMutableArray alloc] init];
+    countryArray = [[NSMutableArray alloc] init];
+    
+    [self ReadDefaultData];
+    [self SetDefaultData];
 
     
 //    [self.tableView beginUpdates];
@@ -142,6 +187,7 @@
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     if(searchText.length > 0)
     {
+        //usingDefault = NO;
         [searchText stringByReplacingOccurrencesOfString:@" " withString:@"+"];
         [searchText stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
         
@@ -185,8 +231,86 @@
     else
     {
         [autocompleteSuggestions removeAllObjects];
+        [self SetDefaultData];
         [self.tableView reloadData];
     }
+}
+
+- (void) SetDefaultData
+{
+    usingDefault = YES;
+    inSubMenu = NO;
+    autocompleteSuggestions = [[NSMutableArray alloc] initWithArray:continentsArray copyItems:YES];
+}
+
+- (void) ReadDefaultData {
+    NSString* continentsPath = [[NSBundle mainBundle] pathForResource:@"Continents" ofType:@""];
+    NSString *fileContents = [NSString stringWithContentsOfFile:continentsPath encoding:NSUTF8StringEncoding error:NULL];
+    for (NSString *line in [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]) {
+        [continentsArray addObject:line];
+    }
+    
+    NSMutableArray* tmpArray = [[NSMutableArray alloc] init];
+    
+    continentsPath = [[NSBundle mainBundle] pathForResource:@"Asia" ofType:@""];
+    fileContents = [NSString stringWithContentsOfFile:continentsPath encoding:NSUTF8StringEncoding error:NULL];
+    for (NSString *line in [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]) {
+        [tmpArray addObject:line];
+    }
+    
+    [countryArray addObject:tmpArray];
+//    [tmpArray removeAllObjects];
+    tmpArray = [[NSMutableArray alloc] init];
+    
+    continentsPath = [[NSBundle mainBundle] pathForResource:@"Africa" ofType:@""];
+    fileContents = [NSString stringWithContentsOfFile:continentsPath encoding:NSUTF8StringEncoding error:NULL];
+    for (NSString *line in [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]) {
+        [tmpArray addObject:line];
+    }
+    
+    [countryArray addObject:tmpArray];
+    //[tmpArray removeAllObjects];
+    tmpArray = [[NSMutableArray alloc] init];
+    
+    continentsPath = [[NSBundle mainBundle] pathForResource:@"Europe" ofType:@""];
+    fileContents = [NSString stringWithContentsOfFile:continentsPath encoding:NSUTF8StringEncoding error:NULL];
+    for (NSString *line in [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]) {
+        [tmpArray addObject:line];
+    }
+    
+    [countryArray addObject:tmpArray];
+//    [tmpArray removeAllObjects];
+    tmpArray = [[NSMutableArray alloc] init];
+    
+    continentsPath = [[NSBundle mainBundle] pathForResource:@"North America" ofType:@""];
+    fileContents = [NSString stringWithContentsOfFile:continentsPath encoding:NSUTF8StringEncoding error:NULL];
+    for (NSString *line in [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]) {
+        [tmpArray addObject:line];
+    }
+    
+    [countryArray addObject:tmpArray];
+//    [tmpArray removeAllObjects];
+    tmpArray = [[NSMutableArray alloc] init];
+    
+    continentsPath = [[NSBundle mainBundle] pathForResource:@"Oceania" ofType:@""];
+    fileContents = [NSString stringWithContentsOfFile:continentsPath encoding:NSUTF8StringEncoding error:NULL];
+    for (NSString *line in [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]) {
+        [tmpArray addObject:line];
+    }
+    
+    [countryArray addObject:tmpArray];
+    [tmpArray removeAllObjects];
+    
+    continentsPath = [[NSBundle mainBundle] pathForResource:@"South America" ofType:@""];
+    fileContents = [NSString stringWithContentsOfFile:continentsPath encoding:NSUTF8StringEncoding error:NULL];
+    for (NSString *line in [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]) {
+        [tmpArray addObject:line];
+    }
+    
+    [countryArray addObject:tmpArray];
+    //[tmpArray removeAllObjects];
+    
+    
 }
 
 
