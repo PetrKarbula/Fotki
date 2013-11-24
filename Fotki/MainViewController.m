@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navItem;
+@property (strong, nonatomic) UIImageView* backgroundView;
 
 @end
 
@@ -80,10 +81,9 @@
     UIImage *backgroundImage = [[UIImage alloc]init];
     backgroundImage = [UIImage imageNamed:@"backdrop.png"];
     
-    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
-    [backgroundImageView setFrame:CGRectMake(0, 0,[backgroundImage size].width, [backgroundImage size].height)];
-    [self.view addSubview:backgroundImageView];
-
+    self.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
+    [self.backgroundView setFrame:CGRectMake(0, 0,[backgroundImage size].width, [backgroundImage size].height)];
+    [self.view addSubview:self.backgroundView];
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -251,6 +251,7 @@
                  self.progress.hidden = YES;
                  self.collectionView.hidden = NO;
                  
+                 [self.backgroundView removeFromSuperview];
                  [self.collectionView reloadData];
              }
          }];
