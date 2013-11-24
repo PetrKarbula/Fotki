@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40992F91841989E00F5E9C7 /* pozadi_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = E40992F81841989E00F5E9C7 /* pozadi_menu.png */; };
+		E40992FC1841AB8A00F5E9C7 /* Hvezda_bila.png in Resources */ = {isa = PBXBuildFile; fileRef = E40992FA1841AB8A00F5E9C7 /* Hvezda_bila.png */; };
+		E40992FD1841AB8A00F5E9C7 /* Hvezda_cerna.png in Resources */ = {isa = PBXBuildFile; fileRef = E40992FB1841AB8A00F5E9C7 /* Hvezda_cerna.png */; };
+		E40993021841AD8100F5E9C7 /* Krizek_bila.png in Resources */ = {isa = PBXBuildFile; fileRef = E40992FE1841AD8100F5E9C7 /* Krizek_bila.png */; };
+		E40993031841AD8100F5E9C7 /* Krizek_cerna.png in Resources */ = {isa = PBXBuildFile; fileRef = E40992FF1841AD8100F5E9C7 /* Krizek_cerna.png */; };
+		E40993041841AD8100F5E9C7 /* Srdce_bila.png in Resources */ = {isa = PBXBuildFile; fileRef = E40993001841AD8100F5E9C7 /* Srdce_bila.png */; };
+		E40993051841AD8100F5E9C7 /* Srdce_cerna.png in Resources */ = {isa = PBXBuildFile; fileRef = E40993011841AD8100F5E9C7 /* Srdce_cerna.png */; };
 		E41A021F1841502E006EB6A3 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A020D1841502E006EB6A3 /* AFHTTPClient.m */; };
 		E41A02201841502E006EB6A3 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A020F1841502E006EB6A3 /* AFHTTPRequestOperation.m */; };
 		E41A02211841502E006EB6A3 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A02111841502E006EB6A3 /* AFImageRequestOperation.m */; };
@@ -76,6 +83,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E40992F81841989E00F5E9C7 /* pozadi_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pozadi_menu.png; sourceTree = "<group>"; };
+		E40992FA1841AB8A00F5E9C7 /* Hvezda_bila.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hvezda_bila.png; sourceTree = "<group>"; };
+		E40992FB1841AB8A00F5E9C7 /* Hvezda_cerna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hvezda_cerna.png; sourceTree = "<group>"; };
+		E40992FE1841AD8100F5E9C7 /* Krizek_bila.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Krizek_bila.png; sourceTree = "<group>"; };
+		E40992FF1841AD8100F5E9C7 /* Krizek_cerna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Krizek_cerna.png; sourceTree = "<group>"; };
+		E40993001841AD8100F5E9C7 /* Srdce_bila.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Srdce_bila.png; sourceTree = "<group>"; };
+		E40993011841AD8100F5E9C7 /* Srdce_cerna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Srdce_cerna.png; sourceTree = "<group>"; };
 		E41A020C1841502E006EB6A3 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		E41A020D1841502E006EB6A3 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		E41A020E1841502E006EB6A3 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -245,6 +259,13 @@
 		E442355E1840FC3F00A8874D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E40992FE1841AD8100F5E9C7 /* Krizek_bila.png */,
+				E40992FF1841AD8100F5E9C7 /* Krizek_cerna.png */,
+				E40993001841AD8100F5E9C7 /* Srdce_bila.png */,
+				E40993011841AD8100F5E9C7 /* Srdce_cerna.png */,
+				E40992FA1841AB8A00F5E9C7 /* Hvezda_bila.png */,
+				E40992FB1841AB8A00F5E9C7 /* Hvezda_cerna.png */,
+				E40992F81841989E00F5E9C7 /* pozadi_menu.png */,
 				E442355F1840FC3F00A8874D /* bookmark.png */,
 				E44235601840FC3F00A8874D /* bookmark_photo.jpg */,
 				E44235611840FC3F00A8874D /* calendar.png */,
@@ -432,8 +453,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E41A02341841655E006EB6A3 /* Africa in Resources */,
+				E40992F91841989E00F5E9C7 /* pozadi_menu.png in Resources */,
 				E44235721840FC3F00A8874D /* photo_photo.jpg in Resources */,
 				E44235771840FC3F00A8874D /* menu@2x.png in Resources */,
+				E40993021841AD8100F5E9C7 /* Krizek_bila.png in Resources */,
 				E442357A1840FC3F00A8874D /* photo.png in Resources */,
 				E44235741840FC3F00A8874D /* comments_photo.jpg in Resources */,
 				E442357C1840FC3F00A8874D /* tag_photo.jpg in Resources */,
@@ -441,6 +464,8 @@
 				E41A02361841655E006EB6A3 /* Asia in Resources */,
 				E44235701840FC3F00A8874D /* bookmark_photo.jpg in Resources */,
 				E44235791840FC3F00A8874D /* news.png in Resources */,
+				E40993041841AD8100F5E9C7 /* Srdce_bila.png in Resources */,
+				E40992FC1841AB8A00F5E9C7 /* Hvezda_bila.png in Resources */,
 				E442357B1840FC3F00A8874D /* tag.png in Resources */,
 				E44235711840FC3F00A8874D /* calendar.png in Resources */,
 				E44235751840FC3F00A8874D /* map.png in Resources */,
@@ -448,6 +473,7 @@
 				E487B9F41840E3970076D64E /* Images.xcassets in Resources */,
 				E41A02381841655E006EB6A3 /* Europe in Resources */,
 				E442356F1840FC3F00A8874D /* bookmark.png in Resources */,
+				E40993051841AD8100F5E9C7 /* Srdce_cerna.png in Resources */,
 				E44235731840FC3F00A8874D /* comments.png in Resources */,
 				E41A02391841655E006EB6A3 /* North America in Resources */,
 				E442357E1840FC3F00A8874D /* wishlist_photo.jpg in Resources */,
@@ -455,7 +481,9 @@
 				E41A023B1841655E006EB6A3 /* South America in Resources */,
 				E442357D1840FC3F00A8874D /* wishlist.png in Resources */,
 				E487B9E61840E3970076D64E /* InfoPlist.strings in Resources */,
+				E40993031841AD8100F5E9C7 /* Krizek_cerna.png in Resources */,
 				E44235781840FC3F00A8874D /* nav_bg.png in Resources */,
+				E40992FD1841AB8A00F5E9C7 /* Hvezda_cerna.png in Resources */,
 				E487B9EF1840E3970076D64E /* Main.storyboard in Resources */,
 				EAE8CFDF18416EB700B401D4 /* CustomGalleryCell.xib in Resources */,
 			);
