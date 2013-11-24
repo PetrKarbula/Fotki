@@ -14,10 +14,12 @@
 }
 
 @property (strong, nonatomic) NSString *url;
-@property (strong, nonatomic) NSString *id;
+@property (strong, nonatomic) NSString *photo_id;
 @property (strong, nonatomic) NSString *lat;
 @property (strong, nonatomic) NSString *lon;
 @property (strong, nonatomic) NSString *country;
 @property (strong, nonatomic) UIImage  *image;
+@property (nonatomic, assign) BOOL  downloaded;
+
 
 @end

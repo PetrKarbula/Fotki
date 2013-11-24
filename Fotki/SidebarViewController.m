@@ -46,7 +46,7 @@
                 [autocompleteSuggestions removeAllObjects];
                 [self.tableView reloadData];
                 
-                [delegate.mainView postWithParameters:[self addressBuilder]];
+                [delegate.mainView postWithParameters:[self addressBuilder] removePictures:YES];
                 
                 [self .revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
                 
@@ -72,7 +72,8 @@
         [autocompleteSuggestions removeAllObjects];
         [self.tableView reloadData];
         
-        [delegate.mainView postWithParameters:[self addressBuilder]];
+        
+        [delegate.mainView postWithParameters:[self addressBuilder] removePictures:YES];
         
         [self .revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
     }
@@ -125,7 +126,8 @@
     
     [self ReadDefaultData];
     [self SetDefaultData];
-
+    //[self.revealViewController setFrontViewPosition: FrontViewPositionRight animated: YES];
+    
     
 //    [self.tableView beginUpdates];
 //        NSIndexPath *path1 = [NSIndexPath indexPathForRow:1 inSection:0]; //ALSO TRIED WITH indexPathRow:0
@@ -180,6 +182,21 @@
 }
 
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    //[delegate.mainView postWithParameters:[searchBar text] removePictures:YES];
+    
+    //[self .revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
+
+    
+}
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
 {
     // Set the title of navigation bar by using the menu items

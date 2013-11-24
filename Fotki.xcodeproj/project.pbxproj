@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E40992F91841989E00F5E9C7 /* pozadi_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = E40992F81841989E00F5E9C7 /* pozadi_menu.png */; };
-		E40992FC1841AB8A00F5E9C7 /* Hvezda_bila.png in Resources */ = {isa = PBXBuildFile; fileRef = E40992FA1841AB8A00F5E9C7 /* Hvezda_bila.png */; };
-		E40992FD1841AB8A00F5E9C7 /* Hvezda_cerna.png in Resources */ = {isa = PBXBuildFile; fileRef = E40992FB1841AB8A00F5E9C7 /* Hvezda_cerna.png */; };
-		E40993021841AD8100F5E9C7 /* Krizek_bila.png in Resources */ = {isa = PBXBuildFile; fileRef = E40992FE1841AD8100F5E9C7 /* Krizek_bila.png */; };
-		E40993031841AD8100F5E9C7 /* Krizek_cerna.png in Resources */ = {isa = PBXBuildFile; fileRef = E40992FF1841AD8100F5E9C7 /* Krizek_cerna.png */; };
-		E40993041841AD8100F5E9C7 /* Srdce_bila.png in Resources */ = {isa = PBXBuildFile; fileRef = E40993001841AD8100F5E9C7 /* Srdce_bila.png */; };
-		E40993051841AD8100F5E9C7 /* Srdce_cerna.png in Resources */ = {isa = PBXBuildFile; fileRef = E40993011841AD8100F5E9C7 /* Srdce_cerna.png */; };
+		6D8B68961841B77F00A7769F /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E442359718411B6700A8874D /* GoogleMaps.framework */; };
+		6D8B68B51841B8E000A7769F /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68991841B8E000A7769F /* MKAnnotationView+WebCache.m */; };
+		6D8B68B61841B8E000A7769F /* NSData+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B689B1841B8E000A7769F /* NSData+GIF.m */; };
+		6D8B68B71841B8E000A7769F /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B689D1841B8E000A7769F /* SDImageCache.m */; };
+		6D8B68B81841B8E000A7769F /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B689F1841B8E000A7769F /* SDWebImageCompat.m */; };
+		6D8B68B91841B8E000A7769F /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68A11841B8E000A7769F /* SDWebImageDecoder.m */; };
+		6D8B68BA1841B8E000A7769F /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68A31841B8E000A7769F /* SDWebImageDownloader.m */; };
+		6D8B68BB1841B8E000A7769F /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68A51841B8E000A7769F /* SDWebImageDownloaderOperation.m */; };
+		6D8B68BC1841B8E000A7769F /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68A71841B8E000A7769F /* SDWebImageManager.m */; };
+		6D8B68BD1841B8E000A7769F /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68AA1841B8E000A7769F /* SDWebImagePrefetcher.m */; };
+		6D8B68BE1841B8E000A7769F /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68AC1841B8E000A7769F /* UIButton+WebCache.m */; };
+		6D8B68BF1841B8E000A7769F /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68AE1841B8E000A7769F /* UIImage+GIF.m */; };
+		6D8B68C01841B8E000A7769F /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68B01841B8E000A7769F /* UIImage+MultiFormat.m */; };
+		6D8B68C11841B8E000A7769F /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68B21841B8E000A7769F /* UIImage+WebP.m */; };
+		6D8B68C21841B8E000A7769F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D8B68B41841B8E000A7769F /* UIImageView+WebCache.m */; };
+		6D8B68C61841C35600A7769F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B68C51841C35600A7769F /* Default.png */; };
+		6D8B68DC1841DE2F00A7769F /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B68DB1841DE2F00A7769F /* AppIcon.png */; };
+		6D8B68E01841E03E00A7769F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B68DF1841E03E00A7769F /* Default@2x.png */; };
 		E41A021F1841502E006EB6A3 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A020D1841502E006EB6A3 /* AFHTTPClient.m */; };
 		E41A02201841502E006EB6A3 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A020F1841502E006EB6A3 /* AFHTTPRequestOperation.m */; };
 		E41A02211841502E006EB6A3 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A02111841502E006EB6A3 /* AFImageRequestOperation.m */; };
@@ -67,7 +78,6 @@
 		E487B9FB1840E3970076D64E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9FA1840E3970076D64E /* XCTest.framework */; };
 		E487B9FC1840E3970076D64E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9DB1840E3960076D64E /* Foundation.framework */; };
 		E487B9FD1840E3970076D64E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9DF1840E3960076D64E /* UIKit.framework */; };
-		EAE8CFD71841587500B401D4 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E442359718411B6700A8874D /* GoogleMaps.framework */; };
 		EAE8CFDA18416DFD00B401D4 /* CustomGalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE8CFD918416DFD00B401D4 /* CustomGalleryCell.m */; };
 		EAE8CFDF18416EB700B401D4 /* CustomGalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE8CFDD18416EB700B401D4 /* CustomGalleryCell.xib */; };
 /* End PBXBuildFile section */
@@ -83,13 +93,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E40992F81841989E00F5E9C7 /* pozadi_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pozadi_menu.png; sourceTree = "<group>"; };
-		E40992FA1841AB8A00F5E9C7 /* Hvezda_bila.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hvezda_bila.png; sourceTree = "<group>"; };
-		E40992FB1841AB8A00F5E9C7 /* Hvezda_cerna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hvezda_cerna.png; sourceTree = "<group>"; };
-		E40992FE1841AD8100F5E9C7 /* Krizek_bila.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Krizek_bila.png; sourceTree = "<group>"; };
-		E40992FF1841AD8100F5E9C7 /* Krizek_cerna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Krizek_cerna.png; sourceTree = "<group>"; };
-		E40993001841AD8100F5E9C7 /* Srdce_bila.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Srdce_bila.png; sourceTree = "<group>"; };
-		E40993011841AD8100F5E9C7 /* Srdce_cerna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Srdce_cerna.png; sourceTree = "<group>"; };
+		6D8B68981841B8E000A7769F /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
+		6D8B68991841B8E000A7769F /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
+		6D8B689A1841B8E000A7769F /* NSData+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+GIF.h"; sourceTree = "<group>"; };
+		6D8B689B1841B8E000A7769F /* NSData+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+GIF.m"; sourceTree = "<group>"; };
+		6D8B689C1841B8E000A7769F /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
+		6D8B689D1841B8E000A7769F /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
+		6D8B689E1841B8E000A7769F /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
+		6D8B689F1841B8E000A7769F /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
+		6D8B68A01841B8E000A7769F /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
+		6D8B68A11841B8E000A7769F /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		6D8B68A21841B8E000A7769F /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
+		6D8B68A31841B8E000A7769F /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
+		6D8B68A41841B8E000A7769F /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		6D8B68A51841B8E000A7769F /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		6D8B68A61841B8E000A7769F /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
+		6D8B68A71841B8E000A7769F /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
+		6D8B68A81841B8E000A7769F /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
+		6D8B68A91841B8E000A7769F /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		6D8B68AA1841B8E000A7769F /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		6D8B68AB1841B8E000A7769F /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
+		6D8B68AC1841B8E000A7769F /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		6D8B68AD1841B8E000A7769F /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		6D8B68AE1841B8E000A7769F /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		6D8B68AF1841B8E000A7769F /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		6D8B68B01841B8E000A7769F /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		6D8B68B11841B8E000A7769F /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
+		6D8B68B21841B8E000A7769F /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
+		6D8B68B31841B8E000A7769F /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		6D8B68B41841B8E000A7769F /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		6D8B68C51841C35600A7769F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6D8B68DB1841DE2F00A7769F /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
+		6D8B68DF1841E03E00A7769F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E41A020C1841502E006EB6A3 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		E41A020D1841502E006EB6A3 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		E41A020E1841502E006EB6A3 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -176,7 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E487B9DC1840E3960076D64E /* Foundation.framework in Frameworks */,
-				EAE8CFD71841587500B401D4 /* GoogleMaps.framework in Frameworks */,
+				6D8B68961841B77F00A7769F /* GoogleMaps.framework in Frameworks */,
 				E4423588184103A200A8874D /* CoreLocation.framework in Frameworks */,
 				E44235861841039D00A8874D /* MapKit.framework in Frameworks */,
 				E487B9DE1840E3960076D64E /* CoreGraphics.framework in Frameworks */,
@@ -197,6 +232,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D8B68971841B8E000A7769F /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				6D8B68981841B8E000A7769F /* MKAnnotationView+WebCache.h */,
+				6D8B68991841B8E000A7769F /* MKAnnotationView+WebCache.m */,
+				6D8B689A1841B8E000A7769F /* NSData+GIF.h */,
+				6D8B689B1841B8E000A7769F /* NSData+GIF.m */,
+				6D8B689C1841B8E000A7769F /* SDImageCache.h */,
+				6D8B689D1841B8E000A7769F /* SDImageCache.m */,
+				6D8B689E1841B8E000A7769F /* SDWebImageCompat.h */,
+				6D8B689F1841B8E000A7769F /* SDWebImageCompat.m */,
+				6D8B68A01841B8E000A7769F /* SDWebImageDecoder.h */,
+				6D8B68A11841B8E000A7769F /* SDWebImageDecoder.m */,
+				6D8B68A21841B8E000A7769F /* SDWebImageDownloader.h */,
+				6D8B68A31841B8E000A7769F /* SDWebImageDownloader.m */,
+				6D8B68A41841B8E000A7769F /* SDWebImageDownloaderOperation.h */,
+				6D8B68A51841B8E000A7769F /* SDWebImageDownloaderOperation.m */,
+				6D8B68A61841B8E000A7769F /* SDWebImageManager.h */,
+				6D8B68A71841B8E000A7769F /* SDWebImageManager.m */,
+				6D8B68A81841B8E000A7769F /* SDWebImageOperation.h */,
+				6D8B68A91841B8E000A7769F /* SDWebImagePrefetcher.h */,
+				6D8B68AA1841B8E000A7769F /* SDWebImagePrefetcher.m */,
+				6D8B68AB1841B8E000A7769F /* UIButton+WebCache.h */,
+				6D8B68AC1841B8E000A7769F /* UIButton+WebCache.m */,
+				6D8B68AD1841B8E000A7769F /* UIImage+GIF.h */,
+				6D8B68AE1841B8E000A7769F /* UIImage+GIF.m */,
+				6D8B68AF1841B8E000A7769F /* UIImage+MultiFormat.h */,
+				6D8B68B01841B8E000A7769F /* UIImage+MultiFormat.m */,
+				6D8B68B11841B8E000A7769F /* UIImage+WebP.h */,
+				6D8B68B21841B8E000A7769F /* UIImage+WebP.m */,
+				6D8B68B31841B8E000A7769F /* UIImageView+WebCache.h */,
+				6D8B68B41841B8E000A7769F /* UIImageView+WebCache.m */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
 		E41A020B1841502E006EB6A3 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +311,7 @@
 		E44235531840F60000A8874D /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				6D8B68971841B8E000A7769F /* SDWebImage */,
 				E41A020B1841502E006EB6A3 /* AFNetworking */,
 				E442359618411B6700A8874D /* GoogleMaps-iOS-1.6.0 */,
 				E44235541840F60000A8874D /* SWRevealViewController.h */,
@@ -259,13 +331,6 @@
 		E442355E1840FC3F00A8874D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				E40992FE1841AD8100F5E9C7 /* Krizek_bila.png */,
-				E40992FF1841AD8100F5E9C7 /* Krizek_cerna.png */,
-				E40993001841AD8100F5E9C7 /* Srdce_bila.png */,
-				E40993011841AD8100F5E9C7 /* Srdce_cerna.png */,
-				E40992FA1841AB8A00F5E9C7 /* Hvezda_bila.png */,
-				E40992FB1841AB8A00F5E9C7 /* Hvezda_cerna.png */,
-				E40992F81841989E00F5E9C7 /* pozadi_menu.png */,
 				E442355F1840FC3F00A8874D /* bookmark.png */,
 				E44235601840FC3F00A8874D /* bookmark_photo.jpg */,
 				E44235611840FC3F00A8874D /* calendar.png */,
@@ -297,6 +362,9 @@
 		E487B9CF1840E3960076D64E = {
 			isa = PBXGroup;
 			children = (
+				6D8B68C51841C35600A7769F /* Default.png */,
+				6D8B68DF1841E03E00A7769F /* Default@2x.png */,
+				6D8B68DB1841DE2F00A7769F /* AppIcon.png */,
 				E44235AD184142F300A8874D /* FotkiBuilder.h */,
 				E44235AE184142F300A8874D /* FotkiBuilder.m */,
 				E44235A61841402800A8874D /* FotkiData.h */,
@@ -423,6 +491,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Craneballs_Barcelona;
 				TargetAttributes = {
+					E487B9D71840E3960076D64E = {
+						DevelopmentTeam = S3NH7XA229;
+					};
 					E487B9F81840E3970076D64E = {
 						TestTargetID = E487B9D71840E3960076D64E;
 					};
@@ -453,10 +524,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E41A02341841655E006EB6A3 /* Africa in Resources */,
-				E40992F91841989E00F5E9C7 /* pozadi_menu.png in Resources */,
 				E44235721840FC3F00A8874D /* photo_photo.jpg in Resources */,
+				6D8B68C61841C35600A7769F /* Default.png in Resources */,
 				E44235771840FC3F00A8874D /* menu@2x.png in Resources */,
-				E40993021841AD8100F5E9C7 /* Krizek_bila.png in Resources */,
 				E442357A1840FC3F00A8874D /* photo.png in Resources */,
 				E44235741840FC3F00A8874D /* comments_photo.jpg in Resources */,
 				E442357C1840FC3F00A8874D /* tag_photo.jpg in Resources */,
@@ -464,26 +534,23 @@
 				E41A02361841655E006EB6A3 /* Asia in Resources */,
 				E44235701840FC3F00A8874D /* bookmark_photo.jpg in Resources */,
 				E44235791840FC3F00A8874D /* news.png in Resources */,
-				E40993041841AD8100F5E9C7 /* Srdce_bila.png in Resources */,
-				E40992FC1841AB8A00F5E9C7 /* Hvezda_bila.png in Resources */,
 				E442357B1840FC3F00A8874D /* tag.png in Resources */,
+				6D8B68E01841E03E00A7769F /* Default@2x.png in Resources */,
 				E44235711840FC3F00A8874D /* calendar.png in Resources */,
 				E44235751840FC3F00A8874D /* map.png in Resources */,
 				E41A023A1841655E006EB6A3 /* Oceania in Resources */,
 				E487B9F41840E3970076D64E /* Images.xcassets in Resources */,
 				E41A02381841655E006EB6A3 /* Europe in Resources */,
 				E442356F1840FC3F00A8874D /* bookmark.png in Resources */,
-				E40993051841AD8100F5E9C7 /* Srdce_cerna.png in Resources */,
 				E44235731840FC3F00A8874D /* comments.png in Resources */,
+				6D8B68DC1841DE2F00A7769F /* AppIcon.png in Resources */,
 				E41A02391841655E006EB6A3 /* North America in Resources */,
 				E442357E1840FC3F00A8874D /* wishlist_photo.jpg in Resources */,
 				E44235761840FC3F00A8874D /* menu.png in Resources */,
 				E41A023B1841655E006EB6A3 /* South America in Resources */,
 				E442357D1840FC3F00A8874D /* wishlist.png in Resources */,
 				E487B9E61840E3970076D64E /* InfoPlist.strings in Resources */,
-				E40993031841AD8100F5E9C7 /* Krizek_cerna.png in Resources */,
 				E44235781840FC3F00A8874D /* nav_bg.png in Resources */,
-				E40992FD1841AB8A00F5E9C7 /* Hvezda_cerna.png in Resources */,
 				E487B9EF1840E3970076D64E /* Main.storyboard in Resources */,
 				EAE8CFDF18416EB700B401D4 /* CustomGalleryCell.xib in Resources */,
 			);
@@ -504,20 +571,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				E41A02211841502E006EB6A3 /* AFImageRequestOperation.m in Sources */,
+				6D8B68BC1841B8E000A7769F /* SDWebImageManager.m in Sources */,
+				6D8B68B81841B8E000A7769F /* SDWebImageCompat.m in Sources */,
+				6D8B68BD1841B8E000A7769F /* SDWebImagePrefetcher.m in Sources */,
+				6D8B68C21841B8E000A7769F /* UIImageView+WebCache.m in Sources */,
 				E41A02201841502E006EB6A3 /* AFHTTPRequestOperation.m in Sources */,
+				6D8B68B71841B8E000A7769F /* SDImageCache.m in Sources */,
 				E487B9F21840E3970076D64E /* ViewController.m in Sources */,
+				6D8B68BE1841B8E000A7769F /* UIButton+WebCache.m in Sources */,
 				E44235841840FE1300A8874D /* PhotoViewController.m in Sources */,
 				E41A02251841502E006EB6A3 /* AFURLConnectionOperation.m in Sources */,
+				6D8B68C11841B8E000A7769F /* UIImage+WebP.m in Sources */,
 				E41A02231841502E006EB6A3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				E487B9EC1840E3970076D64E /* AppDelegate.m in Sources */,
 				E487B9E81840E3970076D64E /* main.m in Sources */,
+				6D8B68BF1841B8E000A7769F /* UIImage+GIF.m in Sources */,
 				E41A02241841502E006EB6A3 /* AFPropertyListRequestOperation.m in Sources */,
+				6D8B68B61841B8E000A7769F /* NSData+GIF.m in Sources */,
+				6D8B68C01841B8E000A7769F /* UIImage+MultiFormat.m in Sources */,
+				6D8B68B91841B8E000A7769F /* SDWebImageDecoder.m in Sources */,
 				E442355C1840F6A300A8874D /* SidebarViewController.m in Sources */,
 				E41A02261841502E006EB6A3 /* AFXMLRequestOperation.m in Sources */,
+				6D8B68BB1841B8E000A7769F /* SDWebImageDownloaderOperation.m in Sources */,
+				6D8B68B51841B8E000A7769F /* MKAnnotationView+WebCache.m in Sources */,
 				E41A02271841502E006EB6A3 /* UIImageView+AFNetworking.m in Sources */,
 				E44235AF184142F300A8874D /* FotkiBuilder.m in Sources */,
 				E41A02221841502E006EB6A3 /* AFJSONRequestOperation.m in Sources */,
 				E44235A81841402800A8874D /* FotkiData.m in Sources */,
+				6D8B68BA1841B8E000A7769F /* SDWebImageDownloader.m in Sources */,
 				E442355B1840F6A300A8874D /* MainViewController.m in Sources */,
 				E44235561840F60000A8874D /* SWRevealViewController.m in Sources */,
 				EAE8CFDA18416DFD00B401D4 /* CustomGalleryCell.m in Sources */,
@@ -638,19 +719,21 @@
 		E487BA0B1840E3970076D64E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/malykuba/Craneballs/Fotki_git/Libraries/GoogleMaps-iOS-1.6.0",
 					"/Users/Marek/Documents/Fotki/Libraries/GoogleMaps-iOS-1.6.0",
+					"/Users/mlady/PROJECTS/Fotki/Libraries/GoogleMaps-iOS-1.6.0",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fotki/Fotki-Prefix.pch";
 				INFOPLIST_FILE = "Fotki/Fotki-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -659,19 +742,21 @@
 		E487BA0C1840E3970076D64E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/malykuba/Craneballs/Fotki_git/Libraries/GoogleMaps-iOS-1.6.0",
 					"/Users/Marek/Documents/Fotki/Libraries/GoogleMaps-iOS-1.6.0",
+					"/Users/mlady/PROJECTS/Fotki/Libraries/GoogleMaps-iOS-1.6.0",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Fotki/Fotki-Prefix.pch";
 				INFOPLIST_FILE = "Fotki/Fotki-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
