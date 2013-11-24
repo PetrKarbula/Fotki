@@ -28,4 +28,6 @@
 - (void) addButtonToCountryParts: (NSString *)btnNamebtn;
 - (void) removeLastBtnFromCountryParts;
 
+- (void) removeAllFromCountryParts;
+
 @end

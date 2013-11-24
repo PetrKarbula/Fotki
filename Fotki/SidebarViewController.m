@@ -116,7 +116,7 @@
     backgroundImage = [UIImage imageNamed:@"pozadi_menu.png"];
     
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
-    [backgroundImageView setFrame:CGRectMake(self.view.frame.size.width * 0.25 , self.view.frame.size.height * 0.15,[backgroundImage size].width * 0.3 , [backgroundImage size].height * 0.3)];
+    [backgroundImageView setFrame:CGRectMake(self.view.frame.size.width * 0.10 , self.view.frame.size.height * 0.3,[backgroundImage size].width * 0.3 , [backgroundImage size].height * 0.3)];
     [self.view addSubview:backgroundImageView];
     
     autocompleteSuggestions = [[NSMutableArray alloc] init];
@@ -134,6 +134,42 @@
 //        NSArray *indexArray = [NSArray arrayWithObjects:path1,nil];
 //        [self.tableView insertRowsAtIndexPaths:indexArray withRowAnimation:UITableViewRowAnimationNone];
 //    [self.tableView endUpdates];
+    
+    
+    // create a UIButton (Deconnect button)
+    UIButton *btnDeco = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *originalImage = [UIImage imageNamed:@"Srdce_menu.png"];
+    UIImage *scaledImage =
+    [UIImage imageWithCGImage:[originalImage CGImage]
+                        scale:(originalImage.scale * 2.0)
+                  orientation:(originalImage.imageOrientation)];
+    [btnDeco setImage:scaledImage forState:UIControlStateNormal];
+    btnDeco.frame = CGRectMake(-100, 0, 280, 40);
+    btnDeco.backgroundColor = [UIColor clearColor];
+    [btnDeco setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    //[btnDeco addTarget:self action:@selector(deconnect:) forControlEvents:UIControlEventTouchUpInside];
+    
+    // create a UIButton (Change pseudo button)
+    UIButton *btnChange = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIImage *originalImage2 = [UIImage imageNamed:@"Nastaveni"];
+    UIImage *scaledImage2 =
+    [UIImage imageWithCGImage:[originalImage2 CGImage]
+                        scale:(originalImage2.scale * 2.0)
+                  orientation:(originalImage2.imageOrientation)];
+    [btnChange setImage:scaledImage2 forState:UIControlStateNormal];
+    
+    btnChange.frame = CGRectMake(100, 0, 100, 40);
+    btnChange.backgroundColor = [UIColor clearColor];
+    [btnChange setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    //[btnChange addTarget:self action:@selector(changePseudo:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    //create a footer view on the bottom of the tabeview
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(20, 0, 100, 40)];
+    [footerView addSubview:btnDeco];
+    [footerView addSubview:btnChange];
+
+    self.tableView.tableFooterView = footerView;
 }
 
 - (void)didReceiveMemoryWarning

@@ -43,18 +43,25 @@
     self.progress.hidden = YES;
     self.collectionView.hidden = YES;
     
-
-    
     
     [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTextColor:[[UIColor alloc] initWithRed: 219 / 255.f green: 219 / 255.f blue: 219 / 255.f alpha:1.f]];
 
     
     countryParts = [[NSMutableArray alloc] init];
     
-    //[countryParts addObject: _navItem.leftBarButtonItems];
+    [countryParts addObject: _navItem.leftBarButtonItem];
+    
+    UIImage *originalImage = [UIImage imageNamed:@"Logo_lista.png"];
+    UIImage *scaledImage =
+    [UIImage imageWithCGImage:[originalImage CGImage]
+                        scale:(originalImage.scale * 2.0)
+                  orientation:(originalImage.imageOrientation)];
+    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:[[UIImageView alloc] initWithImage:scaledImage]];
+    
+    _navItem.rightBarButtonItem = item;
 
     self.collectionView.delegate = self;
-
+    
 }
 
 -(void)setupCollectionView {
@@ -318,11 +325,6 @@
     [countryParts addObject:tmpBtn];
     
     _navItem.leftBarButtonItems = (NSArray*)countryParts;
-    
-    //[buttons addObject:tmpBtn];
-    
-    
-    //_navItem.leftBarButtonItems = (NSArray*)buttons;
 }
 
 - (void) removeLastBtnFromCountryParts
@@ -332,6 +334,14 @@
         [countryParts removeLastObject];
         
         _navItem.leftBarButtonItems = (NSArray*)countryParts;
+    }
+}
+
+- (void) removeAllFromCountryParts
+{
+    for (int i = 1; i < [countryParts count]; i++)
+    {
+        [countryParts removeObjectAtIndex:i];
     }
 }
 
