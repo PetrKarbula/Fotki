@@ -29,7 +29,7 @@
     fotkis = [[NSArray alloc] init];
     
     // Change button color
-    _sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
+    _sidebarButton.tintColor = [UIColor colorWithWhite:0.5f alpha:1.0f];
     
     // Set the side bar button action. When it's tapped, it'll show up the sidebar.
     _sidebarButton.target = self.revealViewController;

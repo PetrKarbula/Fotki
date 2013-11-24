@@ -3,6 +3,11 @@
 @interface SidebarViewController : UITableViewController
 {
     NSMutableArray *autocompleteSuggestions;
+    NSMutableArray *continentsArray;
+    NSMutableArray *countryArray;
+    
+    BOOL usingDefault;
+    BOOL inSubMenu;
 }
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
