@@ -49,7 +49,6 @@
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     [flowLayout setMinimumInteritemSpacing:0.0f];
     [flowLayout setMinimumLineSpacing:0.0f];
-    [flowLayout setItemSize:CGSizeMake(100, 50)];
 
     [self.collectionView setPagingEnabled:YES];
     [self.collectionView setCollectionViewLayout:flowLayout];
@@ -114,7 +113,7 @@
 
 - (void) downloadAndSaveImg
 {
-    for (int i = 0; i < 1; i++) //FotkiData *data in fotkis
+    for (int i = 0; i < 4; i++) //FotkiData *data in fotkis
     {
         FotkiData *data = [fotkis objectAtIndex:i];
         NSLog(@"Downloading...");
@@ -166,6 +165,34 @@
     [cell updateCell];
     
     return cell;
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:
+(NSTimeInterval)duration {
+    
+    // Fade the collectionView out
+    [self.collectionView setAlpha:0.0f];
+    
+    // Suppress the layout errors by invalidating the layout
+    [self.collectionView.collectionViewLayout invalidateLayout];
+    
+    // Calculate the index of the item that the collectionView is currently displaying
+    CGPoint currentOffset = [self.collectionView contentOffset];
+    self.currentIndex = currentOffset.x / self.collectionView.frame.size.width;
+}
+
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    
+    // Force realignment of cell being displayed
+    CGSize currentSize = self.collectionView.bounds.size;
+    float offset = self.currentIndex * currentSize.width;
+    [self.collectionView setContentOffset:CGPointMake(offset, 0)];
+    
+    // Fade the collectionView back in
+    [UIView animateWithDuration:0.125f animations:^{
+        [self.collectionView setAlpha:1.0f];
+    }];
+    
 }
 
 @end
