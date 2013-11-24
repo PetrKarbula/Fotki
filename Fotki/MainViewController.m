@@ -6,6 +6,7 @@
 #import "FotkiBuilder.h"
 
 #import "CustomGalleryCell.h"
+#import "UIImageView+WebCache.h"
 
 @interface MainViewController ()
 
@@ -113,38 +114,58 @@
 
 - (void) downloadAndSaveImg
 {
-    for (int i = 0; i < 4; i++) //FotkiData *data in fotkis
+    for (FotkiData *dataFotki in fotkis) //FotkiData *data in fotkis
     {
-        FotkiData *data = [fotkis objectAtIndex:i];
+        //FotkiData *data = [fotkis objectAtIndex:i];
         NSLog(@"Downloading...");
         // Get an image from the URL below
-        UIImage *image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:data.url]]];
+        //UIImage *image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:data.url]]];
         
-        NSLog(@"%f,%f",image.size.width,image.size.height);
+        SDWebImageManager *manager = [SDWebImageManager sharedManager];
+        [manager downloadWithURL:[NSURL URLWithString:dataFotki.url]
+                         options:0
+                        progress:^(NSUInteger receivedSize, long long expectedSize)
+         {
+             // progression tracking code
+         }
+                       completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished)
+         {
+             if (image)
+             {
+                 NSLog(@"%f,%f",image.size.width,image.size.height);
+                 dataFotki.image = image;
+                 // do something with image
+                 
+                 // UKLADANI
+                 
+                 // Let's save the file into Document folder.
+                 // You can also change this to your desktop for testing. (e.g. /Users/kiichi/Desktop/)
+                 // NSString *deskTopDir = @"/Users/kiichi/Desktop";
+                 
+                 NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+                 
+                 // If you go to the folder below, you will find those pictures
+                 NSLog(@"%@",docDir);
+                 
+                 NSLog(@"saving jpeg");
+                 //NSString *jpegFilePath = [NSString stringWithFormat:@"%@/%@.jpeg", docDir, dataFotki.id];
+                 //NSData *data2 = [NSData dataWithData:UIImageJPEGRepresentation(image, 1.0f)];//1.0f = 100% quality
+                 //[data2 writeToFile:jpegFilePath atomically:YES];
+                 
+                 NSLog(@"saving image done");
+                 self.progress.hidden = YES;
+                 self.collectionView.hidden = NO;
+                 
+                 [self.collectionView reloadData];
+             }
+         }];
         
-        data.image = image;
         
-        // UKLADANI
         
-        // Let's save the file into Document folder.
-        // You can also change this to your desktop for testing. (e.g. /Users/kiichi/Desktop/)
-        // NSString *deskTopDir = @"/Users/kiichi/Desktop";
         
-        NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         
-        // If you go to the folder below, you will find those pictures
-        NSLog(@"%@",docDir);
         
-        NSLog(@"saving jpeg");
-        NSString *jpegFilePath = [NSString stringWithFormat:@"%@/%@.jpeg", docDir, data.id];
-        NSData *data2 = [NSData dataWithData:UIImageJPEGRepresentation(image, 1.0f)];//1.0f = 100% quality
-        [data2 writeToFile:jpegFilePath atomically:YES];
-        
-        NSLog(@"saving image done");
-        self.progress.hidden = YES;
-        self.collectionView.hidden = NO;
 
-        [self.collectionView reloadData];
     }
 }
 
