@@ -3,6 +3,7 @@
 @interface MainViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 {
     NSMutableArray *fotkis;
+    NSMutableArray *countryParts;
     NSString *currectSearch;
     BOOL downloadInProgress;
     int set;
@@ -22,5 +23,9 @@
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView;
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section;
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
+
+
+- (void) addButtonToCountryParts: (NSString *)btnNamebtn;
+- (void) removeLastBtnFromCountryParts;
 
 @end

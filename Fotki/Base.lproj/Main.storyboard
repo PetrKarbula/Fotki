@@ -119,6 +119,7 @@
                     <connections>
                         <outlet property="btnLike" destination="Gfa-Le-u94" id="ipB-mj-5bX"/>
                         <outlet property="collectionView" destination="Idx-WL-1Ua" id="iQw-Up-er8"/>
+                        <outlet property="navItem" destination="fTQ-gJ-Rc9" id="u8V-FI-VMC"/>
                         <outlet property="sidebarButton" destination="zI5-vB-EZo" id="Hhk-hq-NEm"/>
                         <outlet property="view" destination="J4o-5z-N3J" id="1mO-8h-dPL"/>
                     </connections>
