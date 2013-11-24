@@ -52,7 +52,7 @@
     
     countryParts = [[NSMutableArray alloc] init];
     
-    [countryParts addObject: _navItem.leftBarButtonItem];
+    [countryParts addObject: _sidebarButton];
     
     UIImage *originalImage = [UIImage imageNamed:@"Logo_lista.png"];
     UIImage *scaledImage =
@@ -346,6 +346,20 @@
     
     [countryParts addObject:tmpBtn];
     
+    // pridani pomlcky do predchozi cesty
+    int count = [countryParts count];
+    
+    
+    
+    if (count > 2)
+    {
+        NSString *tmp = [[NSString alloc] init];
+        tmp = [(UIBarButtonItem*)[countryParts objectAtIndex:[countryParts count] - 2] title];
+        tmp = [tmp stringByAppendingString:@"  -> "];
+        
+        [(UIBarButtonItem*)[countryParts objectAtIndex:[countryParts count] - 2] setTitle: tmp];
+    }
+    
     _navItem.leftBarButtonItems = (NSArray*)countryParts;
 }
 
@@ -361,10 +375,11 @@
 
 - (void) removeAllFromCountryParts
 {
-    for (int i = 1; i < [countryParts count]; i++)
-    {
-        [countryParts removeObjectAtIndex:i];
-    }
+    [countryParts removeAllObjects];
+    
+    [countryParts addObject:_sidebarButton];
+    
+    _navItem.leftBarButtonItems = (NSArray*)countryParts;
 }
 
 @end
