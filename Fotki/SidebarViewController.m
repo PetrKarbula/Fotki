@@ -37,13 +37,18 @@
 
 - (NSString*) addressBuilder
 {
-    NSArray *parameters = [searchBar.text componentsSeparatedByString:@","];
-    NSString *address;
+    NSArray *parameters = [searchBar.text componentsSeparatedByString:@", "];
+    NSString *address = [[NSString alloc] init];
     for(int i = 0; i < parameters.count; i++)
     {
-        [address stringByAppendingString:[NSString stringWithFormat:@"address%i=%@&", i, [parameters objectAtIndex:i]]];
+        NSString *param = [NSString stringWithFormat:@"address%i=%@&", i, (NSString*)[parameters objectAtIndex:i]];
+        address = [address stringByAppendingString:param];
     }
-    [address substringToIndex:[address length]-2];
+    
+    NSRange stringRange = {0, address.length-1};
+    stringRange = [address rangeOfComposedCharacterSequencesForRange:stringRange];
+    
+    address = [address substringWithRange:stringRange];
     
     return address;
 }

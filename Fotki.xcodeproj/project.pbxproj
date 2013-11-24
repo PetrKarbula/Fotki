@@ -54,6 +54,8 @@
 		E487B9FC1840E3970076D64E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9DB1840E3960076D64E /* Foundation.framework */; };
 		E487B9FD1840E3970076D64E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E487B9DF1840E3960076D64E /* UIKit.framework */; };
 		EAE8CFD71841587500B401D4 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E442359718411B6700A8874D /* GoogleMaps.framework */; };
+		EAE8CFDA18416DFD00B401D4 /* CustomGalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE8CFD918416DFD00B401D4 /* CustomGalleryCell.m */; };
+		EAE8CFDF18416EB700B401D4 /* CustomGalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE8CFDD18416EB700B401D4 /* CustomGalleryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,9 @@
 		E487B9F31840E3970076D64E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E487B9F91840E3970076D64E /* FotkiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FotkiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E487B9FA1840E3970076D64E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EAE8CFD818416DFD00B401D4 /* CustomGalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomGalleryCell.h; sourceTree = "<group>"; };
+		EAE8CFD918416DFD00B401D4 /* CustomGalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomGalleryCell.m; sourceTree = "<group>"; };
+		EAE8CFDD18416EB700B401D4 /* CustomGalleryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomGalleryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +291,9 @@
 				E44235821840FE1300A8874D /* PhotoViewController.m */,
 				E44235571840F6A300A8874D /* MainViewController.h */,
 				E44235581840F6A300A8874D /* MainViewController.m */,
+				EAE8CFD818416DFD00B401D4 /* CustomGalleryCell.h */,
+				EAE8CFDD18416EB700B401D4 /* CustomGalleryCell.xib */,
+				EAE8CFD918416DFD00B401D4 /* CustomGalleryCell.m */,
 				E44235591840F6A300A8874D /* SidebarViewController.h */,
 				E442355A1840F6A300A8874D /* SidebarViewController.m */,
 				E487BA101840E3EC0076D64E /* iPad */,
@@ -413,6 +421,7 @@
 				E487B9E61840E3970076D64E /* InfoPlist.strings in Resources */,
 				E44235781840FC3F00A8874D /* nav_bg.png in Resources */,
 				E487B9EF1840E3970076D64E /* Main.storyboard in Resources */,
+				EAE8CFDF18416EB700B401D4 /* CustomGalleryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +456,7 @@
 				E44235A81841402800A8874D /* FotkiData.m in Sources */,
 				E442355B1840F6A300A8874D /* MainViewController.m in Sources */,
 				E44235561840F60000A8874D /* SWRevealViewController.m in Sources */,
+				EAE8CFDA18416DFD00B401D4 /* CustomGalleryCell.m in Sources */,
 				E44235831840FE1300A8874D /* MapViewController.m in Sources */,
 				E41A021F1841502E006EB6A3 /* AFHTTPClient.m in Sources */,
 			);

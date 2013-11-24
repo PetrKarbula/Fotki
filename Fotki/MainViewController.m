@@ -5,6 +5,8 @@
 #import "FotkiData.h"
 #import "FotkiBuilder.h"
 
+#import "CustomGalleryCell.h"
+
 @interface MainViewController ()
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
@@ -22,8 +24,8 @@
     
     delegate.mainView = self;
     
-    self.title = @"News";
-    
+    [self setupCollectionView];
+        
     fotkis = [[NSArray alloc] init];
     
     // Change button color
@@ -37,6 +39,24 @@
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     
     self.progress.hidden = YES;
+    self.collectionView.hidden = YES;
+}
+
+-(void)setupCollectionView {
+    [self.collectionView registerClass:[CustomGalleryCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
+    
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    [flowLayout setMinimumInteritemSpacing:0.0f];
+    [flowLayout setMinimumLineSpacing:0.0f];
+    [flowLayout setItemSize:CGSizeMake(100, 50)];
+
+    [self.collectionView setPagingEnabled:YES];
+    [self.collectionView setCollectionViewLayout:flowLayout];
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return self.collectionView.frame.size;
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,14 +89,11 @@
      {
          if ([data length] > 0 && error == nil)
          {
-             //NSString* answer = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+             NSString* answer = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
              
              NSError *error = nil;
              fotkis = [FotkiBuilder fotkiDataFromJSON:data error:&error];
-             
-             //
-             //[answer release];
-             
+
              [self downloadAndSaveImg];
          }
          else if ([data length] == 0 && error == nil)
@@ -97,13 +114,16 @@
 
 - (void) downloadAndSaveImg
 {
-    for (FotkiData *data in fotkis)
+    for (int i = 0; i < 1; i++) //FotkiData *data in fotkis
     {
+        FotkiData *data = [fotkis objectAtIndex:i];
         NSLog(@"Downloading...");
         // Get an image from the URL below
         UIImage *image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:data.url]]];
         
         NSLog(@"%f,%f",image.size.width,image.size.height);
+        
+        data.image = image;
         
         // UKLADANI
         
@@ -123,7 +143,29 @@
         
         NSLog(@"saving image done");
         self.progress.hidden = YES;
+        self.collectionView.hidden = NO;
+
+        [self.collectionView reloadData];
     }
+}
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return [fotkis count];
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CustomGalleryCell *cell = (CustomGalleryCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
+    
+    FotkiData *data = [fotkis objectAtIndex:indexPath.row];
+    [cell setImage:data.image];
+    
+    [cell updateCell];
+    
+    return cell;
 }
 
 @end
