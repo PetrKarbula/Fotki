@@ -43,6 +43,8 @@
     self.progress.hidden = YES;
     self.collectionView.hidden = YES;
     
+
+    [self.revealViewController revealToggleAnimated:YES];
     
     [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTextColor:[[UIColor alloc] initWithRed: 219 / 255.f green: 219 / 255.f blue: 219 / 255.f alpha:1.f]];
 
@@ -74,6 +76,14 @@
 
     [self.collectionView setPagingEnabled:YES];
     [self.collectionView setCollectionViewLayout:flowLayout];
+    
+    UIImage *backgroundImage = [[UIImage alloc]init];
+    backgroundImage = [UIImage imageNamed:@"backdrop.png"];
+    
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
+    [backgroundImageView setFrame:CGRectMake(0, 0,[backgroundImage size].width, [backgroundImage size].height)];
+    [self.view addSubview:backgroundImageView];
+
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -283,6 +293,12 @@
                 set++;
                 [self postWithParameters:currectSearch removePictures:NO];
             }
+        }
+        
+        if([indexPath indexAtPosition:1] > 6)
+        {
+            //[fotkis removeObjectAtIndex:0];
+            //[self.collectionView reloadData];
         }
     }
 }
