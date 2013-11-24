@@ -311,6 +311,11 @@
     }
     else
     {
+        AppDelegate *delegate = (AppDelegate*)
+        [[UIApplication sharedApplication] delegate];
+        
+        [delegate.mainView removeAllFromCountryParts];
+        
         [autocompleteSuggestions removeAllObjects];
         [self SetDefaultData];
         [self.tableView reloadData];
