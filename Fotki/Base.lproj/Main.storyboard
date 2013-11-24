@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -8,10 +8,6 @@
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="SWRevealViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pFq-0p-j33"/>
-                        <viewControllerLayoutGuide type="bottom" id="3Wa-Dk-q0j"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -30,27 +26,15 @@
         <scene sceneID="1ap-bF-ghj">
             <objects>
                 <viewController id="Mhp-xK-ldS" customClass="PhotoViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YJl-Hg-w6B"/>
-                        <viewControllerLayoutGuide type="bottom" id="exD-Nd-3kR"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WeS-mk-fjS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bc-4P-qYM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="0bc-4P-qYM">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="224" id="gPB-KD-jz9"/>
-                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="0bc-4P-qYM" firstAttribute="top" secondItem="WeS-mk-fjS" secondAttribute="top" id="gqG-wy-cyr"/>
-                            <constraint firstItem="0bc-4P-qYM" firstAttribute="leading" secondItem="WeS-mk-fjS" secondAttribute="leading" id="nPQ-cx-M46"/>
-                            <constraint firstItem="0bc-4P-qYM" firstAttribute="trailing" secondItem="WeS-mk-fjS" secondAttribute="trailing" id="yhP-5J-4AR"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kZw-XK-oPO">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="jFk-sY-78V"/>
@@ -69,10 +53,6 @@
         <scene sceneID="Rv9-ja-Tgg">
             <objects>
                 <viewController id="fTH-KM-0hk" customClass="MapViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yda-JU-vDu"/>
-                        <viewControllerLayoutGuide type="bottom" id="5lv-kv-CO1"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9UE-up-QHt">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -96,15 +76,11 @@
         <scene sceneID="WVx-eQ-Fja">
             <objects>
                 <viewController title="Main View Controller" id="7aF-RO-BPj" customClass="MainViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="IzO-xW-yks"/>
-                        <viewControllerLayoutGuide type="bottom" id="woI-6Z-pOG"/>
-                    </layoutGuides>
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="J4o-5z-N3J">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Idx-WL-1Ua">
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" id="Idx-WL-1Ua">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gex-Aq-v4C">
@@ -119,7 +95,7 @@
                                     <outlet property="delegate" destination="7aF-RO-BPj" id="qWS-23-dlz"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfa-Le-u94">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Gfa-Le-u94">
                                 <rect key="frame" x="0.0" y="600" width="117" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="" image="Srdce_bila.png"/>
@@ -130,12 +106,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Idx-WL-1Ua" firstAttribute="top" secondItem="J4o-5z-N3J" secondAttribute="top" id="7MM-EC-Kmz"/>
-                            <constraint firstItem="Idx-WL-1Ua" firstAttribute="leading" secondItem="J4o-5z-N3J" secondAttribute="leading" id="crW-Iw-iDX"/>
-                            <constraint firstItem="Idx-WL-1Ua" firstAttribute="bottom" secondItem="J4o-5z-N3J" secondAttribute="bottom" id="heS-ln-b0e"/>
-                            <constraint firstItem="Idx-WL-1Ua" firstAttribute="trailing" secondItem="J4o-5z-N3J" secondAttribute="trailing" id="yZE-kq-FaY"/>
-                        </constraints>
                         <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                         <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

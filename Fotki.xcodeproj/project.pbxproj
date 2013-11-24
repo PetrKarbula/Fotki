@@ -25,6 +25,7 @@
 		6D8B68C61841C35600A7769F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B68C51841C35600A7769F /* Default.png */; };
 		6D8B68DC1841DE2F00A7769F /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B68DB1841DE2F00A7769F /* AppIcon.png */; };
 		6D8B68E01841E03E00A7769F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B68DF1841E03E00A7769F /* Default@2x.png */; };
+		6D8B68E21842007C00A7769F /* backdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D8B68E11842007C00A7769F /* backdrop.png */; };
 		E41A021F1841502E006EB6A3 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A020D1841502E006EB6A3 /* AFHTTPClient.m */; };
 		E41A02201841502E006EB6A3 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A020F1841502E006EB6A3 /* AFHTTPRequestOperation.m */; };
 		E41A02211841502E006EB6A3 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E41A02111841502E006EB6A3 /* AFImageRequestOperation.m */; };
@@ -125,6 +126,7 @@
 		6D8B68C51841C35600A7769F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6D8B68DB1841DE2F00A7769F /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
 		6D8B68DF1841E03E00A7769F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6D8B68E11842007C00A7769F /* backdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backdrop.png; path = ../../backdrop.png; sourceTree = "<group>"; };
 		E41A020C1841502E006EB6A3 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		E41A020D1841502E006EB6A3 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		E41A020E1841502E006EB6A3 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 		E442355E1840FC3F00A8874D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6D8B68E11842007C00A7769F /* backdrop.png */,
 				E442355F1840FC3F00A8874D /* bookmark.png */,
 				E44235601840FC3F00A8874D /* bookmark_photo.jpg */,
 				E44235611840FC3F00A8874D /* calendar.png */,
@@ -541,6 +544,7 @@
 				E41A023A1841655E006EB6A3 /* Oceania in Resources */,
 				E487B9F41840E3970076D64E /* Images.xcassets in Resources */,
 				E41A02381841655E006EB6A3 /* Europe in Resources */,
+				6D8B68E21842007C00A7769F /* backdrop.png in Resources */,
 				E442356F1840FC3F00A8874D /* bookmark.png in Resources */,
 				E44235731840FC3F00A8874D /* comments.png in Resources */,
 				6D8B68DC1841DE2F00A7769F /* AppIcon.png in Resources */,
